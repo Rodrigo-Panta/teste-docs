@@ -16,8 +16,8 @@ Guarantee a condition about the current value (enough stock, valid status) or en
 
 | You want to…                               | Use instead             |
 |--------------------------------------------|-------------------------|
-| transform the value                        | [`Map`](map)         |
-| chain a step that produces a new value     | [`Then`](then)       |
+| transform the value                        | [`Map`](./map.md)         |
+| chain a step that produces a new value     | [`Then`](./then.md)       |
 | automatic validation **before** the handler | (validation pipeline)   |
 
 ---
@@ -31,16 +31,16 @@ Guarantee a condition about the current value (enough stock, valid status) or en
 | `RequireNotFound` | `(AxisError errorIfFound)` | found → fail; `NotFound` → continue as success |
 | `WithValue` | `(value)` | promotes an `AxisResult` (no value) to `AxisResult<T>` |
 
-All have `Async` variants (`Task`/`ValueTask`) and [with `CancellationToken`](cancellation).
+All have `Async` variants (`Task`/`ValueTask`) and [with `CancellationToken`](./cancellation.md).
 
 ---
 
 ## Example 1 — business-rule guard
 
 ```csharp
-return GetProductAsync(.ProductId) // AxisResult<Product>
-    .EnsureAsync(p => p.Stock >= .Quantity, AxisError.BusinessRule("INSUFFICIENT_STOCK"))
-    .ThenAsync(p => reserveStockPort.ReserveAsync(p.Id, .Quantity));
+return GetProductAsync(cmd.ProductId) // AxisResult<Product>
+    .EnsureAsync(p => p.Stock >= cmd.Quantity, AxisError.BusinessRule("INSUFFICIENT_STOCK"))
+    .ThenAsync(p => reserveStockPort.ReserveAsync(p.Id, cmd.Quantity));
 ```
 
 **Why it pays off:** the "is there stock?" rule stays **on the rail itself**, as a readable step, instead of a loose `if` with a `return BadRequest` in the middle of the handler.
@@ -63,10 +63,10 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 
 ## See also
 
-- [Chain · `Then`](then) — the step that follows the guard
-- [Errors and types](errors-and-types) — choosing the right `AxisError` for the failure
-- [Recover · `Recover`](recover) — the opposite: handle the failure and return to success
+- [Chain · `Then`](./then.md) — the step that follows the guard
+- [Errors and types](./errors-and-types.md) — choosing the right `AxisError` for the failure
+- [Recover · `Recover`](./recover.md) — the opposite: handle the failure and return to success
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

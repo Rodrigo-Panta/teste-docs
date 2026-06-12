@@ -7,7 +7,7 @@ description: This is a page in my Starlight-powered site
 
 # Aggregate · `Combine` / `All`
 
-> Reduces **many** results into **one**. Unlike [`Zip`](zip) (which combines different values into a tuple), here you fold a **collection** — and collect **all** the errors, not just the first.
+> Reduces **many** results into **one**. Unlike [`Zip`](./zip.md) (which combines different values into a tuple), here you fold a **collection** — and collect **all** the errors, not just the first.
 
 ---
 
@@ -31,9 +31,9 @@ Validate several fields at once (wanting to see all the failures), or consolidat
 
 ```csharp
 var result = AxisResult.Combine(
-    ValidateName(.Name),
-    ValidateEmail(.Email),
-    ValidateAge(.Age));
+    ValidateName(cmd.Name),
+    ValidateEmail(cmd.Email),
+    ValidateAge(cmd.Age));
 // collects ALL the errors, not just the first
 ```
 
@@ -54,16 +54,16 @@ var result = await AxisResult.AllAsync(
 ## `Combine`/`All` vs `Zip`
 
 - **`Combine`/`All`** → N items of the **same** type → a list (or an aggregated void).
-- **[`Zip`](zip)** → 2–4 **different** values → a tuple.
+- **[`Zip`](./zip.md)** → 2–4 **different** values → a tuple.
 
 ---
 
 ## See also
 
-- [Combine · `Zip`](zip) — for heterogeneous values in a tuple
-- [Errors and types](errors-and-types) — why accumulating all the errors matters
-- [Ensure · `Ensure`](ensure) — validation of a single value on the rail
+- [Combine · `Zip`](./zip.md) — for heterogeneous values in a tuple
+- [Errors and types](./errors-and-types.md) — why accumulating all the errors matters
+- [Ensure · `Ensure`](./ensure.md) — validation of a single value on the rail
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

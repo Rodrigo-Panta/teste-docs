@@ -16,8 +16,8 @@ You need 2 to 4 values from distinct operations to build a result (a dashboard, 
 
 | You want to… | Use instead |
 |---|---|
-| reduce **N** results of the **same** type into one | [`Combine`/`All`](aggregate) |
-| replace the value (not accumulate) | [`Then`](then) |
+| reduce **N** results of the **same** type into one | [`Combine`/`All`](./aggregate.md) |
+| replace the value (not accumulate) | [`Then`](./then.md) |
 
 ---
 
@@ -67,10 +67,10 @@ var dashboard = await GetUserAsync(userId)
 
 ## See also
 
-- [Transform · `Map`](map) — destructure the tuple with `(a, b) => …`
-- [Aggregate · `Combine`/`All`](aggregate) — for N results of the same type
-- [`Task` vs `ValueTask`](async-task-vs-valuetask) — choosing the async form in `ZipParallel`
+- [Transform · `Map`](./map.md) — destructure the tuple with `(a, b) => …`
+- [Aggregate · `Combine`/`All`](./aggregate.md) — for N results of the same type
+- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — choosing the async form in `ZipParallel`
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

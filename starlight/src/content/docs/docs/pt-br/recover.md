@@ -4,7 +4,7 @@ description: This is a page in my Starlight-powered site
 ---
 # Recuperar · `Recover`
 
-> O oposto do [`Then`](then): opera na **trilha de falha**. `Recover` e seus parentes trazem o pipeline de volta ao sucesso — sempre de forma **deliberada e explícita**.
+> O oposto do [`Then`](./then.md): opera na **trilha de falha**. `Recover` e seus parentes trazem o pipeline de volta ao sucesso — sempre de forma **deliberada e explícita**.
 
 ---
 
@@ -16,8 +16,8 @@ Fornecer um padrão quando algo não foi encontrado, cair para uma fonte alterna
 
 | Você quer… | Use no lugar |
 |---|---|
-| só **observar** o erro (log) sem recuperar | [`TapError`](tap) |
-| **reescrever** o erro, não recuperar | [`MapError`](map-errors) |
+| só **observar** o erro (log) sem recuperar | [`TapError`](./tap.md) |
+| **reescrever** o erro, não recuperar | [`MapError`](./map-errors.md) |
 
 ---
 
@@ -67,6 +67,6 @@ var user = await FindByEmailAsync(email)
 
 ## Veja também
 
-- [Erros e tipos](errors-and-types) — `IsTransient`, tipos e códigos para condicionar a recuperação
-- [Remapear erros · `MapError`](map-errors) — transformar o erro em vez de recuperar
-- [Garantir · `Ensure`](ensure) — o oposto: levar do sucesso à falha
+- [Erros e tipos](./errors-and-types.md) — `IsTransient`, tipos e códigos para condicionar a recuperação
+- [Remapear erros · `MapError`](./map-errors.md) — transformar o erro em vez de recuperar
+- [Garantir · `Ensure`](./ensure.md) — o oposto: levar do sucesso à falha

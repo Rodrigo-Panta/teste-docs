@@ -24,9 +24,9 @@ Use `Then` quando o próximo passo **retorna um `AxisResult`** (pode falhar) e v
 
 | Você quer… | Use no lugar |
 |---|---|
-| transformar o valor com algo que **não pode falhar** (montar um DTO) | [`Map`](map) |
-| **observar** o valor (log, métrica) sem mudar o trilho | [`Tap`](tap) |
-| manter **os dois** valores, o antigo e o novo | [`Zip`](zip) |
+| transformar o valor com algo que **não pode falhar** (montar um DTO) | [`Map`](./map.md) |
+| **observar** o valor (log, métrica) sem mudar o trilho | [`Tap`](./tap.md) |
+| manter **os dois** valores, o antigo e o novo | [`Zip`](./zip.md) |
 
 ---
 
@@ -46,7 +46,7 @@ O comportamento depende **do que o delegate retorna**, não do nome do método:
 
 ## Sobrecargas disponíveis
 
-Toda forma existe para o `AxisResult<T>` síncrono, para pipelines `Task<AxisResult<T>>` e `ValueTask<AxisResult<T>>`. Cada uma também tem uma variante [ciente de `CancellationToken`](cancellation), em que o delegate recebe o token como último parâmetro.
+Toda forma existe para o `AxisResult<T>` síncrono, para pipelines `Task<AxisResult<T>>` e `ValueTask<AxisResult<T>>`. Cada uma também tem uma variante [ciente de `CancellationToken`](./cancellation.md), em que o delegate recebe o token como último parâmetro.
 
 ```csharp
 // substitui o valor
@@ -71,16 +71,16 @@ AxisResult  ToAxisResult()                       // apenas estreita AxisResult<T
 Carregar a entidade, alterá-la, persistir, invalidar o cache, retornar a resposta — cinco passos falíveis, zero `try/catch`. Se **qualquer** passo falhar, tudo depois dele (inclusive o `SaveChanges`) é pulado.
 
 ```csharp
-public Task<AxisResult<GenerateNewSecretResponse>> HandleAsync(GenerateNewSecretCommand )
+public Task<AxisResult<GenerateNewSecretResponse>> HandleAsync(GenerateNewSecretCommand cmd)
 {
     var plain  = ExternalApiSecret.Generate();
     var hashed = ExternalApiSecret.Hash(plain);
 
-    return factory.GetByIdAsync(.ExternalApiId)  // AxisResult<ExternalApi> → NotFound se não existe
+    return factory.GetByIdAsync(cmd.ExternalApiId)  // AxisResult<ExternalApi> → NotFound se não existe
         .ThenAsync(api => api.UpdateSecretAsync(hashed))  // AxisResult → preserva a api
         .ThenAsync(_ => uow.SaveChangesAsync())  // AxisResult → preserva a api
-        .ThenAsync(_ => cacheResolver.RemoveAsync(.ExternalApiId))  // → preserva a api
-        .MapAsync(_ => new GenerateNewSecretResponse { ExternalApiId = .ExternalApiId, Secret = plain });
+        .ThenAsync(_ => cacheResolver.RemoveAsync(cmd.ExternalApiId))  // → preserva a api
+        .MapAsync(_ => new GenerateNewSecretResponse { ExternalApiId = cmd.ExternalApiId, Secret = plain });
 }
 ```
 
@@ -105,8 +105,8 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 Um command sem payload estreita o pipeline tipado de volta para um `AxisResult` simples:
 
 ```csharp
-public Task<AxisResult> HandleAsync(DeleteExternalApiCommand )
-    => factory.GetByIdAsync(.ExternalApiId) // AxisResult<ExternalApiApplication>
+public Task<AxisResult> HandleAsync(DeleteExternalApiCommand cmd)
+    => factory.GetByIdAsync(cmd.ExternalApiId) // AxisResult<ExternalApiApplication>
         .ToAxisResultAsync(app => app.DeleteAsync());  // a operação é finalizada e o app é descartado, retornando um AxisResult
 ```
 
@@ -116,8 +116,8 @@ public Task<AxisResult> HandleAsync(DeleteExternalApiCommand )
 
 ## Veja também
 
-- [`Map`](map) — transformar um valor que não pode falhar
-- [`Ensure`](ensure) — garantir um invariante inline (`RequireNotFound`, `WithValue`)
-- [`Zip`](zip) — manter o valor antigo *e* um novo
-- [Erros e tipos](errors-and-types) — o que um `AxisError` carrega e as 12 categorias
-- [`Task` vs `ValueTask`](async-task-vs-valuetask) — qual forma async encadear
+- [`Map`](./map.md) — transformar um valor que não pode falhar
+- [`Ensure`](./ensure.md) — garantir um invariante inline (`RequireNotFound`, `WithValue`)
+- [`Zip`](./zip.md) — manter o valor antigo *e* um novo
+- [Erros e tipos](./errors-and-types.md) — o que um `AxisError` carrega e as 12 categorias
+- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — qual forma async encadear

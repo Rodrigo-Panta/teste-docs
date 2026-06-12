@@ -54,7 +54,7 @@ return result.Match(
 
 Assim: códigos pequenos e canônicos (`USER_NOT_FOUND`); várias UIs (REST, gRPC, CLI) renderizam o mesmo código de formas diferentes; testes verificam **códigos**, não prosa em inglês; nenhum dado pessoal vaza no payload de erro.
 
-> Precisa passar **detalhes** (id, quantidade tentada)? Emita **vários `AxisError`** — a lista de erros já é a coleção natural para isso. Veja [Agregar · `Combine`/`All`](aggregate).
+> Precisa passar **detalhes** (id, quantidade tentada)? Emita **vários `AxisError`** — a lista de erros já é a coleção natural para isso. Veja [Agregar · `Combine`/`All`](./aggregate.md).
 
 ---
 
@@ -73,6 +73,6 @@ if (error.IsTransient)   // true p/ ServiceUnavailable, Timeout, TooManyRequests
 
 ## Veja também
 
-- [Remapear erros · `MapError`](map-errors) — reescrever códigos/tipos ao cruzar camadas
-- [Recuperar · `Recover`](recover) — voltar da trilha de falha para a de sucesso
-- [Sair · `Match`](match) — converter o resultado final em resposta HTTP
+- [Remapear erros · `MapError`](./map-errors.md) — reescrever códigos/tipos ao cruzar camadas
+- [Recuperar · `Recover`](./recover.md) — voltar da trilha de falha para a de sucesso
+- [Sair · `Match`](./match.md) — converter o resultado final em resposta HTTP

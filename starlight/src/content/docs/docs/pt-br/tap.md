@@ -16,8 +16,8 @@ Registrar um log, emitir uma métrica, disparar um evento *fire-and-forget* — 
 
 | Você quer… | Use no lugar |
 |---|---|
-| um efeito que **pode falhar** e deve curto-circuitar | [`Then`](then) |
-| transformar o valor | [`Map`](map) |
+| um efeito que **pode falhar** e deve curto-circuitar | [`Then`](./then.md) |
+| transformar o valor | [`Map`](./map.md) |
 
 ---
 
@@ -28,14 +28,14 @@ Registrar um log, emitir uma métrica, disparar um evento *fire-and-forget* — 
 | `Tap` / `TapAsync` | **sucesso** | o valor |
 | `TapError` / `TapErrorAsync` | **falha** | a lista de `AxisError` |
 
-Todos retornam o resultado original e existem em `Task`/`ValueTask` e [com `CancellationToken`](cancellation).
+Todos retornam o resultado original e existem em `Task`/`ValueTask` e [com `CancellationToken`](./cancellation.md).
 
 ---
 
 ## Exemplo real — observabilidade nas duas trilhas
 
 ```csharp
-return CreateOrderAsync()
+return CreateOrderAsync(cmd)
     .TapAsync(order  => logger.LogInformation("Order {OrderId} created", order.OrderId)) // só no sucesso
     .TapErrorAsync(errors => metrics.IncrementFailure(errors[0].Code));                   // só na falha
 ```
@@ -56,6 +56,6 @@ return CreateOrderAsync()
 
 ## Veja também
 
-- [Encadear · `Then`](then) — quando o efeito precisa poder falhar
-- [Remapear erros · `MapError`](map-errors) — transformar os erros que o `TapError` observa
-- [Sair · `Match`](match) — o ramo de falha no fim da trilha
+- [Encadear · `Then`](./then.md) — quando o efeito precisa poder falhar
+- [Remapear erros · `MapError`](./map-errors.md) — transformar os erros que o `TapError` observa
+- [Sair · `Match`](./match.md) — o ramo de falha no fim da trilha

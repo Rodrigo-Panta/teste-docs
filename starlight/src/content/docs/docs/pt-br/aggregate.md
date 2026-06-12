@@ -4,7 +4,7 @@ description: This is a page in my Starlight-powered site
 ---
 # Agregar · `Combine` / `All`
 
-> Reduz **muitos** resultados a **um**. Diferente do [`Zip`](zip) (que combina valores diferentes numa tupla), aqui você dobra uma **coleção** — e coleta **todos** os erros, não só o primeiro.
+> Reduz **muitos** resultados a **um**. Diferente do [`Zip`](./zip.md) (que combina valores diferentes numa tupla), aqui você dobra uma **coleção** — e coleta **todos** os erros, não só o primeiro.
 
 ---
 
@@ -28,9 +28,9 @@ Validar vários campos de uma vez (querendo ver todas as falhas), ou consolidar 
 
 ```csharp
 var result = AxisResult.Combine(
-    ValidateName(.Name),
-    ValidateEmail(.Email),
-    ValidateAge(.Age));
+    ValidateName(cmd.Name),
+    ValidateEmail(cmd.Email),
+    ValidateAge(cmd.Age));
 // coleta TODOS os erros, não só o primeiro
 ```
 
@@ -51,12 +51,12 @@ var result = await AxisResult.AllAsync(
 ## `Combine`/`All` vs `Zip`
 
 - **`Combine`/`All`** → N itens do **mesmo** tipo → uma lista (ou um void agregado).
-- **[`Zip`](zip)** → 2–4 valores **diferentes** → uma tupla.
+- **[`Zip`](./zip.md)** → 2–4 valores **diferentes** → uma tupla.
 
 ---
 
 ## Veja também
 
-- [Combinar · `Zip`](zip) — para valores heterogêneos numa tupla
-- [Erros e tipos](errors-and-types) — por que acumular todos os erros importa
-- [Garantir · `Ensure`](ensure) — validação de um único valor na trilha
+- [Combinar · `Zip`](./zip.md) — para valores heterogêneos numa tupla
+- [Erros e tipos](./errors-and-types.md) — por que acumular todos os erros importa
+- [Garantir · `Ensure`](./ensure.md) — validação de um único valor na trilha

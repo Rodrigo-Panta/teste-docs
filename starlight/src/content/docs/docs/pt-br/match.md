@@ -60,6 +60,6 @@ Diferente de `.Value` (que lança numa falha), a desestruturação é segura sem
 
 ## Veja também
 
-- [Erros e tipos](errors-and-types) — o `Type` que vira status HTTP
-- [Encadear · `Then`](then) — o que vem antes do `Match`
-- [Recuperar · `Recover`](recover) — tratar a falha **sem** sair do pipeline
+- [Erros e tipos](./errors-and-types.md) — o `Type` que vira status HTTP
+- [Encadear · `Then`](./then.md) — o que vem antes do `Match`
+- [Recuperar · `Recover`](./recover.md) — tratar a falha **sem** sair do pipeline

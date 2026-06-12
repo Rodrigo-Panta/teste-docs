@@ -53,10 +53,10 @@ Desenhada para controllers ASP.NET, não para lógica de domínio. Suporte bási
 
 ## Veja também
 
-- [Railway-Oriented Programming](railway-oriented-programming) — o modelo que essas features implementam
-- [Primeiros passos](getting-started) — instalar e começar
-- [Referência da API](api-reference) — o catálogo completo de operadores
+- [Railway-Oriented Programming](./railway-oriented-programming.md) — o modelo que essas features implementam
+- [Primeiros passos](./getting-started.md) — instalar e começar
+- [Referência da API](./api-reference.md) — o catálogo completo de operadores
 
 ---
 
-↩ [Voltar à documentação do AxisResult](readme)
+↩ [Voltar à documentação do AxisResult](./README.md)

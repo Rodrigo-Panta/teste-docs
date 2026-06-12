@@ -17,7 +17,7 @@ When a sequence of dependent steps reads better as a query than as a `Then`/`Map
 | You want… | Use instead |
 |---|---|
 | **async** pipelines | the fluent `ThenAsync`/`MapAsync` chain |
-| a single transformation step | [`Map`](map) directly |
+| a single transformation step | [`Map`](./map.md) directly |
 
 ---
 
@@ -54,10 +54,10 @@ var total = GetCustomer(customerId)
 
 ## See also
 
-- [Chain · `Then`](then) — the `from … from …` underneath
-- [Transform · `Map`](map) — the `select` underneath
-- [API reference](api-reference) — the full LINQ table
+- [Chain · `Then`](./then.md) — the `from … from …` underneath
+- [Transform · `Map`](./map.md) — the `select` underneath
+- [API reference](./api-reference.md) — the full LINQ table
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

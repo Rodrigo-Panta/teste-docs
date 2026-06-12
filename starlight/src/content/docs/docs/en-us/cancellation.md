@@ -19,13 +19,13 @@ When you need to pass a `CancellationToken` explicitly through the whole chain (
 The overload hands the token to your delegate and forwards it:
 
 ```csharp
-public Task<AxisResult<CreateOrderResponse>> HandleAsync(CreateOrderCommand , CancellationToken ct)
-    => customerFactory.GetByIdAsync(.CustomerId, ct)
+public Task<AxisResult<CreateOrderResponse>> HandleAsync(CreateOrderCommand cmd, CancellationToken ct)
+    => customerFactory.GetByIdAsync(cmd.CustomerId, ct)
         .ThenAsync((customer, ct) => orderFactory.CreateAsync(new()
         {
             CustomerId = customer.CustomerId,
-            ProductId  = .ProductId,
-            Quantity   = .Quantity
+            ProductId  = cmd.ProductId,
+            Quantity   = cmd.Quantity
         }, ct), ct)
         .ThenAsync((order, ct) => unitOfWork.SaveChangesAsync(ct), ct)
         .MapAsync((order, ct) => Task.FromResult(new CreateOrderResponse { OrderId = order.Id }), ct);
@@ -45,9 +45,9 @@ In apps with dependency injection, register the request's `CancellationToken` as
 
 ## See also
 
-- [`Task` vs `ValueTask`](async-task-vs-valuetask) — the two async families that get CT variants
-- [Chain · `Then`](then) — the most common operator to receive the token
+- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — the two async families that get CT variants
+- [Chain · `Then`](./then.md) — the most common operator to receive the token
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

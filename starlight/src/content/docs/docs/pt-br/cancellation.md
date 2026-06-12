@@ -19,13 +19,13 @@ Quando você precisa passar um `CancellationToken` explicitamente por toda a cad
 A sobrecarga entrega o token ao seu delegate e o encaminha:
 
 ```csharp
-public Task<AxisResult<CreateOrderResponse>> HandleAsync(CreateOrderCommand , CancellationToken ct)
-    => customerFactory.GetByIdAsync(.CustomerId, ct)
+public Task<AxisResult<CreateOrderResponse>> HandleAsync(CreateOrderCommand cmd, CancellationToken ct)
+    => customerFactory.GetByIdAsync(cmd.CustomerId, ct)
         .ThenAsync((customer, ct) => orderFactory.CreateAsync(new()
         {
             CustomerId = customer.CustomerId,
-            ProductId  = .ProductId,
-            Quantity   = .Quantity
+            ProductId  = cmd.ProductId,
+            Quantity   = cmd.Quantity
         }, ct), ct)
         .ThenAsync((order, ct) => unitOfWork.SaveChangesAsync(ct), ct)
         .MapAsync((order, ct) => Task.FromResult(new CreateOrderResponse { OrderId = order.Id }), ct);
@@ -45,5 +45,5 @@ Em apps com injeção de dependência, registre o `CancellationToken` do request
 
 ## Veja também
 
-- [`Task` vs `ValueTask`](async-task-vs-valuetask) — as duas famílias async que ganham variantes CT
-- [Encadear · `Then`](then) — o operador mais comum a receber o token
+- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — as duas famílias async que ganham variantes CT
+- [Encadear · `Then`](./then.md) — o operador mais comum a receber o token

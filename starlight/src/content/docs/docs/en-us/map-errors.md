@@ -16,8 +16,8 @@ An internal service failed with internal codes and you want to expose them with 
 
 | You want to… | Use instead |
 |---|---|
-| **recover** from the failure (return to success) | [`Recover`](recover) |
-| just **observe** the error (log) | [`TapError`](tap) |
+| **recover** from the failure (return to success) | [`Recover`](./recover.md) |
+| just **observe** the error (log) | [`TapError`](./tap.md) |
 
 ---
 
@@ -45,10 +45,10 @@ var result = await internalService.ProcessAsync()
 
 ## See also
 
-- [Errors and types](errors-and-types) — what an `AxisError` carries
-- [Recover · `Recover`](recover) — handle the failure instead of just rewriting it
-- [Exit · `Match`](match) — where the errors become the final response
+- [Errors and types](./errors-and-types.md) — what an `AxisError` carries
+- [Recover · `Recover`](./recover.md) — handle the failure instead of just rewriting it
+- [Exit · `Match`](./match.md) — where the errors become the final response
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

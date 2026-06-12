@@ -53,10 +53,10 @@ Designed for ASP.NET controllers, not for domain logic. Basic `Map`/`Bind` suppo
 
 ## See also
 
-- [Railway-Oriented Programming](railway-oriented-programming) — the model these features implement
-- [Getting started](getting-started) — install and start
-- [API reference](api-reference) — the complete operator catalog
+- [Railway-Oriented Programming](./railway-oriented-programming.md) — the model these features implement
+- [Getting started](./getting-started.md) — install and start
+- [API reference](./api-reference.md) — the complete operator catalog
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

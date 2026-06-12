@@ -17,7 +17,7 @@ Quando uma sequência de passos que dependem um do outro fica mais legível como
 | Você quer… | Use no lugar |
 |---|---|
 | pipelines **async** | a cadeia fluente `ThenAsync`/`MapAsync` |
-| um único passo de transformação | [`Map`](map) direto |
+| um único passo de transformação | [`Map`](./map.md) direto |
 
 ---
 
@@ -54,10 +54,10 @@ var total = GetCustomer(customerId)
 
 ## Veja também
 
-- [Encadear · `Then`](then) — o `from … from …` por baixo
-- [Transformar · `Map`](map) — o `select` por baixo
-- [Referência da API](api-reference) — a tabela LINQ completa
+- [Encadear · `Then`](./then.md) — o `from … from …` por baixo
+- [Transformar · `Map`](./map.md) — o `select` por baixo
+- [Referência da API](./api-reference.md) — a tabela LINQ completa
 
 ---
 
-↩ [Voltar à documentação do AxisResult](readme)
+↩ [Voltar à documentação do AxisResult](./README.md)

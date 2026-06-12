@@ -13,31 +13,31 @@ description: This is a page in my Starlight-powered site
 Isto é como se parece o "C# corporativo" na maioria das bases de código:
 
 ```csharp
-public async Task<ApiResponse> Handle(CreateOrderCommand )
+public async Task<ApiResponse> Handle(CreateOrderCommand cmd)
 {
     try
     {
-        var customer = await _customerRepo.GetByIdAsync(.CustomerId);
+        var customer = await _customerRepo.GetByIdAsync(cmd.CustomerId);
         if (customer == null)
             throw new NotFoundException("Customer not found");
 
         if (!customer.IsActive)
             throw new BusinessRuleException("Customer is not active");
 
-        var existingOrder = await _orderRepo.GetByReferenceAsync(.Reference);
+        var existingOrder = await _orderRepo.GetByReferenceAsync(cmd.Reference);
         if (existingOrder != null)
             throw new ConflictException("Order already exists");
 
-        var product = await _productRepo.GetByIdAsync(.ProductId);
+        var product = await _productRepo.GetByIdAsync(cmd.ProductId);
         if (product == null)
             throw new NotFoundException("Product not found");
 
-        if (product.Stock < .Quantity)
+        if (product.Stock < cmd.Quantity)
             throw new BusinessRuleException("Insufficient stock");
 
         try
         {
-            var order = new Order(customer.Id, product.Id, .Quantity);
+            var order = new Order(customer.Id, product.Id, cmd.Quantity);
             await _orderRepo.CreateAsync(order);
             await _unitOfWork.SaveChangesAsync();
 
@@ -76,13 +76,13 @@ Exceções são **`goto` disfarçados**. Elas quebram a pilha de chamadas, são 
 Agora a mesma lógica com AxisResult:
 
 ```csharp
-public Task<AxisResult<CreateOrderResponse>> HandleAsync(CreateOrderCommand )
-    => customerFactory.GetByIdAsync(.CustomerId)
+public Task<AxisResult<CreateOrderResponse>> HandleAsync(CreateOrderCommand cmd)
+    => customerFactory.GetByIdAsync(cmd.CustomerId)
         .ThenAsync(customer => orderFactory.CreateAsync(new()
         {
             CustomerId = customer.CustomerId,
-            ProductId = .ProductId,
-            Quantity = .Quantity
+            ProductId = cmd.ProductId,
+            Quantity = cmd.Quantity
         }))
         .ThenAsync(_ => unitOfWork.SaveChangesAsync())
         .TapAsync(order => logger.LogInformation("Order {OrderId} created", order.OrderId))
@@ -119,10 +119,10 @@ Não é uma ideia nova — vem da programação funcional (o `Either` de Haskell
 
 ## Veja também
 
-- [Primeiros passos](getting-started) — instalar e escrever o primeiro pipeline
-- [Encadear · `Then`](then) — a chave de desvio mais importante
-- [Por que AxisResult?](why-axisresult) — comparação com outras libraries de Result
+- [Primeiros passos](./getting-started.md) — instalar e escrever o primeiro pipeline
+- [Encadear · `Then`](./then.md) — a chave de desvio mais importante
+- [Por que AxisResult?](./why-axisresult.md) — comparação com outras libraries de Result
 
 ---
 
-↩ [Voltar à documentação do AxisResult](readme)
+↩ [Voltar à documentação do AxisResult](./README.md)

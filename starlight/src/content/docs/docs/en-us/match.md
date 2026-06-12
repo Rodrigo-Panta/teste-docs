@@ -60,10 +60,10 @@ Unlike `.Value` (which throws on a failure), the deconstruction is safe without 
 
 ## See also
 
-- [Errors and types](errors-and-types) — the `Type` that becomes an HTTP status
-- [Chain · `Then`](then) — what comes before `Match`
-- [Recover · `Recover`](recover) — handle the failure **without** leaving the pipeline
+- [Errors and types](./errors-and-types.md) — the `Type` that becomes an HTTP status
+- [Chain · `Then`](./then.md) — what comes before `Match`
+- [Recover · `Recover`](./recover.md) — handle the failure **without** leaving the pipeline
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

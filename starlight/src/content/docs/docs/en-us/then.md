@@ -24,9 +24,9 @@ Use `Then` when the next step **returns an `AxisResult`** (it can fail) and you 
 
 | You want to… | Use instead |
 |---|---|
-| transform the value with something that **cannot fail** (build a DTO) | [`Map`](map) |
-| **observe** the value (log, metric) without changing the rail | [`Tap`](tap) |
-| keep **both** values, the old one and the new one | [`Zip`](zip) |
+| transform the value with something that **cannot fail** (build a DTO) | [`Map`](./map.md) |
+| **observe** the value (log, metric) without changing the rail | [`Tap`](./tap.md) |
+| keep **both** values, the old one and the new one | [`Zip`](./zip.md) |
 
 ---
 
@@ -46,7 +46,7 @@ The behavior depends on **what the delegate returns**, not on the method name:
 
 ## Available overloads
 
-Every form exists for the synchronous `AxisResult<T>`, for `Task<AxisResult<T>>` and `ValueTask<AxisResult<T>>` pipelines. Each one also has a [`CancellationToken`-aware](cancellation) variant, where the delegate receives the token as its last parameter.
+Every form exists for the synchronous `AxisResult<T>`, for `Task<AxisResult<T>>` and `ValueTask<AxisResult<T>>` pipelines. Each one also has a [`CancellationToken`-aware](./cancellation.md) variant, where the delegate receives the token as its last parameter.
 
 ```csharp
 // replaces the value
@@ -71,16 +71,16 @@ AxisResult  ToAxisResult()                       // just narrows AxisResult<T> �
 Load the entity, change it, persist, invalidate the cache, return the response — five failable steps, zero `try/catch`. If **any** step fails, everything after it (including `SaveChanges`) is skipped.
 
 ```csharp
-public Task<AxisResult<GenerateNewSecretResponse>> HandleAsync(GenerateNewSecretCommand )
+public Task<AxisResult<GenerateNewSecretResponse>> HandleAsync(GenerateNewSecretCommand cmd)
 {
     var plain  = ExternalApiSecret.Generate();
     var hashed = ExternalApiSecret.Hash(plain);
 
-    return factory.GetByIdAsync(.ExternalApiId)  // AxisResult<ExternalApi> → NotFound if it doesn't exist
+    return factory.GetByIdAsync(cmd.ExternalApiId)  // AxisResult<ExternalApi> → NotFound if it doesn't exist
         .ThenAsync(api => api.UpdateSecretAsync(hashed))  // AxisResult → preserves the api
         .ThenAsync(_ => uow.SaveChangesAsync())  // AxisResult → preserves the api
-        .ThenAsync(_ => cacheResolver.RemoveAsync(.ExternalApiId))  // → preserves the api
-        .MapAsync(_ => new GenerateNewSecretResponse { ExternalApiId = .ExternalApiId, Secret = plain });
+        .ThenAsync(_ => cacheResolver.RemoveAsync(cmd.ExternalApiId))  // → preserves the api
+        .MapAsync(_ => new GenerateNewSecretResponse { ExternalApiId = cmd.ExternalApiId, Secret = plain });
 }
 ```
 
@@ -105,8 +105,8 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 A command with no payload narrows the typed pipeline back to a plain `AxisResult`:
 
 ```csharp
-public Task<AxisResult> HandleAsync(DeleteExternalApiCommand )
-    => factory.GetByIdAsync(.ExternalApiId) // AxisResult<ExternalApiApplication>
+public Task<AxisResult> HandleAsync(DeleteExternalApiCommand cmd)
+    => factory.GetByIdAsync(cmd.ExternalApiId) // AxisResult<ExternalApiApplication>
         .ToAxisResultAsync(app => app.DeleteAsync());  // the operation finishes and the app is discarded, returning an AxisResult
 ```
 
@@ -116,12 +116,12 @@ public Task<AxisResult> HandleAsync(DeleteExternalApiCommand )
 
 ## See also
 
-- [`Map`](map) — transform a value that cannot fail
-- [`Ensure`](ensure) — guarantee an invariant inline (`RequireNotFound`, `WithValue`)
-- [`Zip`](zip) — keep the old value *and* a new one
-- [Errors and types](errors-and-types) — what an `AxisError` carries and the 12 categories
-- [`Task` vs `ValueTask`](async-task-vs-valuetask) — which async form to chain
+- [`Map`](./map.md) — transform a value that cannot fail
+- [`Ensure`](./ensure.md) — guarantee an invariant inline (`RequireNotFound`, `WithValue`)
+- [`Zip`](./zip.md) — keep the old value *and* a new one
+- [Errors and types](./errors-and-types.md) — what an `AxisError` carries and the 12 categories
+- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — which async form to chain
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

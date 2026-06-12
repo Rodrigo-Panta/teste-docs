@@ -16,8 +16,8 @@ Write a log, emit a metric, fire a *fire-and-forget* event — without affecting
 
 | You want to… | Use instead |
 |---|---|
-| an effect that **can fail** and must short-circuit | [`Then`](then) |
-| transform the value | [`Map`](map) |
+| an effect that **can fail** and must short-circuit | [`Then`](./then.md) |
+| transform the value | [`Map`](./map.md) |
 
 ---
 
@@ -28,14 +28,14 @@ Write a log, emit a metric, fire a *fire-and-forget* event — without affecting
 | `Tap` / `TapAsync` | **success** | the value |
 | `TapError` / `TapErrorAsync` | **failure** | the list of `AxisError` |
 
-All return the original result and exist in `Task`/`ValueTask` and [with `CancellationToken`](cancellation).
+All return the original result and exist in `Task`/`ValueTask` and [with `CancellationToken`](./cancellation.md).
 
 ---
 
 ## Real-world example — observability on both rails
 
 ```csharp
-return CreateOrderAsync()
+return CreateOrderAsync(cmd)
     .TapAsync(order  => logger.LogInformation("Order {OrderId} created", order.OrderId)) // only on success
     .TapErrorAsync(errors => metrics.IncrementFailure(errors[0].Code));                   // only on failure
 ```
@@ -56,10 +56,10 @@ return CreateOrderAsync()
 
 ## See also
 
-- [Chain · `Then`](then) — when the effect needs to be able to fail
-- [Remap errors · `MapError`](map-errors) — transform the errors that `TapError` observes
-- [Exit · `Match`](match) — the failure branch at the end of the rail
+- [Chain · `Then`](./then.md) — when the effect needs to be able to fail
+- [Remap errors · `MapError`](./map-errors.md) — transform the errors that `TapError` observes
+- [Exit · `Match`](./match.md) — the failure branch at the end of the rail
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

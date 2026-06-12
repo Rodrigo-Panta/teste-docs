@@ -21,9 +21,9 @@ The transformation **cannot fail**: building a DTO, formatting, projecting a fie
 
 | You want to… | Use instead |
 |---|---|
-| a step that **can fail** (returns `AxisResult`) | [`Then`](then) |
-| **observe** the value without transforming it | [`Tap`](tap) |
-| transform **errors**, not the value | [`MapError`](map-errors) |
+| a step that **can fail** (returns `AxisResult`) | [`Then`](./then.md) |
+| **observe** the value without transforming it | [`Tap`](./tap.md) |
+| transform **errors**, not the value | [`MapError`](./map-errors.md) |
 
 ---
 
@@ -31,9 +31,9 @@ The transformation **cannot fail**: building a DTO, formatting, projecting a fie
 
 | Method | Signature | Where |
 |---|---|---|
-| `Map` | `T → TNew` | sync · `Task` · `ValueTask` · [+CT](cancellation) |
+| `Map` | `T → TNew` | sync · `Task` · `ValueTask` · [+CT](./cancellation.md) |
 | `Select` | `T → TNew` (LINQ syntax) | sync |
-| `Map((a, b) => …)` | destructures the tuple from [`Zip`](zip) | `Task` (tuples T2–T4) |
+| `Map((a, b) => …)` | destructures the tuple from [`Zip`](./zip.md) | `Task` (tuples T2–T4) |
 
 ```csharp
 // fluent
@@ -65,10 +65,10 @@ public Task<AxisResult<GetExternalApiByIdResponse>> HandleAsync(GetExternalApiBy
 
 ## See also
 
-- [Chain · `Then`](then) — when the next step can fail
-- [Combine · `Zip`](zip) — keep two values and destructure them in `Map`
-- [Side effects · `Tap`](tap) — observe without transforming
+- [Chain · `Then`](./then.md) — when the next step can fail
+- [Combine · `Zip`](./zip.md) — keep two values and destructure them in `Map`
+- [Side effects · `Tap`](./tap.md) — observe without transforming
 
 ---
 
-↩ [Back to AxisResult docs](../../index)
+↩ [Back to AxisResult docs](../../README.md)

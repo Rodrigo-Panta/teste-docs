@@ -16,8 +16,8 @@ Garantir uma condição sobre o valor atual (estoque suficiente, status válido)
 
 | Você quer…                                 | Use no lugar            |
 |--------------------------------------------|-------------------------|
-| transformar o valor                        | [`Map`](map)         |
-| encadear um passo que produz um novo valor | [`Then`](then)       |
+| transformar o valor                        | [`Map`](./map.md)         |
+| encadear um passo que produz um novo valor | [`Then`](./then.md)       |
 | validação automática **antes** do handler  | (pipeline de validação) |
 
 ---
@@ -31,16 +31,16 @@ Garantir uma condição sobre o valor atual (estoque suficiente, status válido)
 | `RequireNotFound` | `(AxisError errorIfFound)` | achou → falha; `NotFound` → segue como sucesso |
 | `WithValue` | `(value)` | promove um `AxisResult` (sem valor) para `AxisResult<T>` |
 
-Todos têm variantes `Async` (`Task`/`ValueTask`) e [com `CancellationToken`](cancellation).
+Todos têm variantes `Async` (`Task`/`ValueTask`) e [com `CancellationToken`](./cancellation.md).
 
 ---
 
 ## Exemplo 1 — guarda de regra de negócio
 
 ```csharp
-return GetProductAsync(.ProductId) // AxisResult<Product>
-    .EnsureAsync(p => p.Stock >= .Quantity, AxisError.BusinessRule("INSUFFICIENT_STOCK"))
-    .ThenAsync(p => reserveStockPort.ReserveAsync(p.Id, .Quantity));
+return GetProductAsync(cmd.ProductId) // AxisResult<Product>
+    .EnsureAsync(p => p.Stock >= cmd.Quantity, AxisError.BusinessRule("INSUFFICIENT_STOCK"))
+    .ThenAsync(p => reserveStockPort.ReserveAsync(p.Id, cmd.Quantity));
 ```
 
 **Por que compensa:** a regra "tem estoque?" fica **na própria trilha**, como um passo legível, em vez de um `if` solto com um `return BadRequest` no meio do handler.
@@ -63,6 +63,6 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 
 ## Veja também
 
-- [Encadear · `Then`](then) — o passo seguinte depois da guarda
-- [Erros e tipos](errors-and-types) — escolher o `AxisError` certo para a falha
-- [Recuperar · `Recover`](recover) — o oposto: tratar a falha e voltar ao sucesso
+- [Encadear · `Then`](./then.md) — o passo seguinte depois da guarda
+- [Erros e tipos](./errors-and-types.md) — escolher o `AxisError` certo para a falha
+- [Recuperar · `Recover`](./recover.md) — o oposto: tratar a falha e voltar ao sucesso
