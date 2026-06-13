@@ -28,55 +28,6 @@ async function findMarkdownFiles(dir) {
   return files.flat();
 }
 
-function shouldTransform(link) {
-  if (
-    link.startsWith("http://") ||
-    link.startsWith("https://") ||
-    link.startsWith("mailto:") ||
-    link.startsWith("#")
-  ) {
-    return false;
-  }
-
-  const pathname = link.split("#")[0].split("?")[0];
-
-  return (
-    !path.extname(pathname) ||
-    pathname.endsWith(".md")
-  );
-}
-
-function normalizeLink(link, markdownFile) {
-  const [pathname, suffix = ""] = link.split(/(?=[?#])/);
-
-  let absolute;
-
-  if (pathname.startsWith("/")) {
-    absolute = path.posix.normalize(pathname);
-  } else {
-    absolute = path.resolve(
-      path.dirname(markdownFile),
-      pathname
-    );
-  }
-  if (absolute.includes("README")) {
-    console.log("absolute:", absolute);
-  }
-
-  const relativeToDocs = path.relative(
-    DOCS_ROOT,
-    absolute
-  );
-
-  const slug =
-    "/" +
-    path.posix
-      .join(BASE_PATH, relativeToDocs)
-      .replace(/\.md$/, "")
-      .replace(/\\/g, "/");
-
-  return slug + suffix;
-}
 
 async function processFile(file) {
   const original = await fs.readFile(file, "utf8");
@@ -85,7 +36,7 @@ async function processFile(file) {
   const updated = original.replace(
     /^# (.*)/g,
     (match, text) => {
-      return `---\ntitle: ${text.replace(/[^a-zA-Z0-9]/g, "")}\n---`;
+      return `---\ntitle: "${text}"\n---`;
     });
 
 
