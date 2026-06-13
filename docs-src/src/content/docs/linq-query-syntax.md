@@ -1,6 +1,8 @@
 ---
-title: LINQ query syntax
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# LINQ query syntax
 
 > For those who prefer *comprehension* syntax, AxisResult supports `from … select …`. It's equivalent to fluent chaining — use whichever form reads better for your team.
 
@@ -15,7 +17,7 @@ When a sequence of dependent steps reads better as a query than as a `Then`/`Map
 | You want… | Use instead |
 |---|---|
 | **async** pipelines | the fluent `ThenAsync`/`MapAsync` chain |
-| a single transformation step | [`Map`](map.md) directly |
+| a single transformation step | [`Map`](/teste-docs/map) directly |
 
 ---
 
@@ -52,10 +54,10 @@ var total = GetCustomer(customerId)
 
 ## See also
 
-- [Chain · `Then`](then.md) — the `from … from …` underneath
-- [Transform · `Map`](map.md) — the `select` underneath
-- [API reference](api-reference.md) — the full LINQ table
+- [Chain · `Then`](/teste-docs/then) — the `from … from …` underneath
+- [Transform · `Map`](/teste-docs/map) — the `select` underneath
+- [API reference](/teste-docs/api-reference) — the full LINQ table
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

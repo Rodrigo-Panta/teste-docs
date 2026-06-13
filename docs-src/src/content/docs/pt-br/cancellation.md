@@ -1,6 +1,8 @@
 ---
-title: Cancelamento · `CancellationToken`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Cancelamento · `CancellationToken`
 
 > Todo operador async tem uma sobrecarga **ciente de `CancellationToken`**: o delegate recebe o token como último parâmetro e o operador o repassa adiante — o token flui pelo pipeline sem poluir *closures*.
 

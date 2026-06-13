@@ -1,6 +1,8 @@
 ---
-title: Referência da API
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Referência da API
 
 > O catálogo completo de operadores, agrupado por responsabilidade. Use como consulta — cada grupo tem uma página de detalhe com exemplos.
 

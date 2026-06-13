@@ -1,6 +1,8 @@
 ---
-title: Exceptions at the boundary · `Try` and adapters
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Exceptions at the boundary · `Try` and adapters
 
 > "Exceptions at the boundary, results everywhere else." This page shows how to convert exception-throwing infrastructure surfaces (database, HTTP, brokers) into `AxisResult` at a single point — and what `Try` does **not** catch.
 
@@ -14,8 +16,8 @@ At any point where external code throws exceptions: database drivers, `HttpClien
 
 | You want to… | Use instead |
 |---|---|
-| chain steps that already return `AxisResult` | [`Then`](then.md) |
-| recover from a transient failure | [`Recover`](recover.md) |
+| chain steps that already return `AxisResult` | [`Then`](/teste-docs/then) |
+| recover from a transient failure | [`Recover`](/teste-docs/recover) |
 
 ---
 
@@ -63,10 +65,10 @@ For `HttpClient`, database drivers, message brokers and any other infrastructure
 
 ## See also
 
-- [Chain · `Then`](then.md) — what consumes the `AxisResult` the boundary produces
-- [Errors and types](errors-and-types.md) — the types to map each exception to
-- [Remap errors · `MapError`](map-errors.md) — translate codes when crossing layers
+- [Chain · `Then`](/teste-docs/then) — what consumes the `AxisResult` the boundary produces
+- [Errors and types](/teste-docs/errors-and-types) — the types to map each exception to
+- [Remap errors · `MapError`](/teste-docs/map-errors) — translate codes when crossing layers
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

@@ -1,6 +1,8 @@
 ---
-title: Por que AxisResult? · comparação
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Por que AxisResult? · comparação
 
 > Existem outras libraries de Result para C#. Esta página diz por que o AxisResult é diferente — uma comparação direta, sem rodeios.
 

@@ -1,6 +1,8 @@
 ---
-title: Sair · `Match`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Sair · `Match`
 
 > O fim da trilha. `Match` colapsa um `AxisResult` em um **valor final** — rodando exatamente **um** dos dois ramos (sucesso ou falha).
 

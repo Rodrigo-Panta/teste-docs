@@ -1,6 +1,8 @@
 ---
-title: Recuperar · `Recover`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Recuperar · `Recover`
 
 > O oposto do [`Then`](/teste-docs/pt-br/then): opera na **trilha de falha**. `Recover` e seus parentes trazem o pipeline de volta ao sucesso — sempre de forma **deliberada e explícita**.
 

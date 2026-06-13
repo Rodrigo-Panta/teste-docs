@@ -1,6 +1,8 @@
 ---
-title: Combine · `Zip`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Combine · `Zip`
 
 > Joins **different values** into a tuple, to use them together later. Each `Zip` adds a value; if any of them fails, the whole tuple short-circuits.
 
@@ -14,8 +16,8 @@ You need 2 to 4 values from distinct operations to build a result (a dashboard, 
 
 | You want to… | Use instead |
 |---|---|
-| reduce **N** results of the **same** type into one | [`Combine`/`All`](aggregate.md) |
-| replace the value (not accumulate) | [`Then`](then.md) |
+| reduce **N** results of the **same** type into one | [`Combine`/`All`](/teste-docs/aggregate) |
+| replace the value (not accumulate) | [`Then`](/teste-docs/then) |
 
 ---
 
@@ -65,10 +67,10 @@ var dashboard = await GetUserAsync(userId)
 
 ## See also
 
-- [Transform · `Map`](map.md) — destructure the tuple with `(a, b) => …`
-- [Aggregate · `Combine`/`All`](aggregate.md) — for N results of the same type
-- [`Task` vs `ValueTask`](async-task-vs-valuetask.md) — choosing the async form in `ZipParallel`
+- [Transform · `Map`](/teste-docs/map) — destructure the tuple with `(a, b) => …`
+- [Aggregate · `Combine`/`All`](/teste-docs/aggregate) — for N results of the same type
+- [`Task` vs `ValueTask`](/teste-docs/async-task-vs-valuetask) — choosing the async form in `ZipParallel`
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

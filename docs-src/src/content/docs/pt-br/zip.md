@@ -1,6 +1,8 @@
 ---
-title: Combinar · `Zip`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Combinar · `Zip`
 
 > Junta **valores diferentes** numa tupla, para usá-los juntos depois. Cada `Zip` adiciona um valor; se qualquer um falhar, a tupla inteira curto-circuita.
 

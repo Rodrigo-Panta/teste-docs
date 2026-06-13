@@ -1,6 +1,8 @@
 ---
-title: Sintaxe de query LINQ
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Sintaxe de query LINQ
 
 > Para quem prefere a sintaxe de *comprehension*, o AxisResult suporta `from … select …`. É equivalente ao encadeamento fluente — use a forma que ler melhor para o seu time.
 

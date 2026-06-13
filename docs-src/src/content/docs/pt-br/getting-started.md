@@ -1,6 +1,8 @@
 ---
-title: Primeiros passos · instalação e uso
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Primeiros passos · instalação e uso
 
 > Instale o pacote, crie resultados, inspecione-os e encadeie a primeira operação — o mínimo para sair do zero em poucos minutos.
 

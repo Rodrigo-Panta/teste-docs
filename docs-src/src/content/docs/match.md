@@ -1,6 +1,8 @@
 ---
-title: Exit · `Match`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Exit · `Match`
 
 > The end of the rail. `Match` collapses an `AxisResult` into a **final value** — running exactly **one** of the two branches (success or failure).
 
@@ -58,10 +60,10 @@ Unlike `.Value` (which throws on a failure), the deconstruction is safe without 
 
 ## See also
 
-- [Errors and types](errors-and-types.md) — the `Type` that becomes an HTTP status
-- [Chain · `Then`](then.md) — what comes before `Match`
-- [Recover · `Recover`](recover.md) — handle the failure **without** leaving the pipeline
+- [Errors and types](/teste-docs/errors-and-types) — the `Type` that becomes an HTTP status
+- [Chain · `Then`](/teste-docs/then) — what comes before `Match`
+- [Recover · `Recover`](/teste-docs/recover) — handle the failure **without** leaving the pipeline
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

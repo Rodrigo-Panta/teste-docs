@@ -1,6 +1,8 @@
 ---
-title: Cancellation · `CancellationToken`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Cancellation · `CancellationToken`
 
 > Every async operator has a **`CancellationToken`-aware** overload: the delegate receives the token as its last parameter and the operator forwards it onward — the token flows through the pipeline without polluting *closures*.
 
@@ -43,9 +45,9 @@ In apps with dependency injection, register the request's `CancellationToken` as
 
 ## See also
 
-- [`Task` vs `ValueTask`](async-task-vs-valuetask.md) — the two async families that get CT variants
-- [Chain · `Then`](then.md) — the most common operator to receive the token
+- [`Task` vs `ValueTask`](/teste-docs/async-task-vs-valuetask) — the two async families that get CT variants
+- [Chain · `Then`](/teste-docs/then) — the most common operator to receive the token
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

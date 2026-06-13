@@ -1,6 +1,8 @@
 ---
-title: Side effects · `Tap`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Side effects · `Tap`
 
 > Runs a side effect (log, metric, event) and **returns the result untouched**. `Tap` changes neither the rail nor the value — it only observes.
 
@@ -14,8 +16,8 @@ Write a log, emit a metric, fire a *fire-and-forget* event — without affecting
 
 | You want to… | Use instead |
 |---|---|
-| an effect that **can fail** and must short-circuit | [`Then`](then.md) |
-| transform the value | [`Map`](map.md) |
+| an effect that **can fail** and must short-circuit | [`Then`](/teste-docs/then) |
+| transform the value | [`Map`](/teste-docs/map) |
 
 ---
 
@@ -26,7 +28,7 @@ Write a log, emit a metric, fire a *fire-and-forget* event — without affecting
 | `Tap` / `TapAsync` | **success** | the value |
 | `TapError` / `TapErrorAsync` | **failure** | the list of `AxisError` |
 
-All return the original result and exist in `Task`/`ValueTask` and [with `CancellationToken`](cancellation.md).
+All return the original result and exist in `Task`/`ValueTask` and [with `CancellationToken`](/teste-docs/cancellation).
 
 ---
 
@@ -54,10 +56,10 @@ return CreateOrderAsync(cmd)
 
 ## See also
 
-- [Chain · `Then`](then.md) — when the effect needs to be able to fail
-- [Remap errors · `MapError`](map-errors.md) — transform the errors that `TapError` observes
-- [Exit · `Match`](match.md) — the failure branch at the end of the rail
+- [Chain · `Then`](/teste-docs/then) — when the effect needs to be able to fail
+- [Remap errors · `MapError`](/teste-docs/map-errors) — transform the errors that `TapError` observes
+- [Exit · `Match`](/teste-docs/match) — the failure branch at the end of the rail
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

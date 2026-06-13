@@ -1,6 +1,8 @@
 ---
-title: Ensure · `Ensure`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Ensure · `Ensure`
 
 > Validates an invariant **inside** the pipeline. If the guard fails, the rail switches to failure and the rest is skipped.
 
@@ -14,8 +16,8 @@ Guarantee a condition about the current value (enough stock, valid status) or en
 
 | You want to…                               | Use instead             |
 |--------------------------------------------|-------------------------|
-| transform the value                        | [`Map`](map.md)         |
-| chain a step that produces a new value     | [`Then`](then.md)       |
+| transform the value                        | [`Map`](/teste-docs/map)         |
+| chain a step that produces a new value     | [`Then`](/teste-docs/then)       |
 | automatic validation **before** the handler | (validation pipeline)   |
 
 ---
@@ -29,7 +31,7 @@ Guarantee a condition about the current value (enough stock, valid status) or en
 | `RequireNotFound` | `(AxisError errorIfFound)` | found → fail; `NotFound` → continue as success |
 | `WithValue` | `(value)` | promotes an `AxisResult` (no value) to `AxisResult<T>` |
 
-All have `Async` variants (`Task`/`ValueTask`) and [with `CancellationToken`](cancellation.md).
+All have `Async` variants (`Task`/`ValueTask`) and [with `CancellationToken`](/teste-docs/cancellation).
 
 ---
 
@@ -61,10 +63,10 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 
 ## See also
 
-- [Chain · `Then`](then.md) — the step that follows the guard
-- [Errors and types](errors-and-types.md) — choosing the right `AxisError` for the failure
-- [Recover · `Recover`](recover.md) — the opposite: handle the failure and return to success
+- [Chain · `Then`](/teste-docs/then) — the step that follows the guard
+- [Errors and types](/teste-docs/errors-and-types) — choosing the right `AxisError` for the failure
+- [Recover · `Recover`](/teste-docs/recover) — the opposite: handle the failure and return to success
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

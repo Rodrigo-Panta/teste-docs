@@ -1,6 +1,8 @@
 ---
-title: Transform · `Map`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Transform · `Map`
 
 > Transforms the value on the success rail with a function that **cannot fail**. On the failure rail, `Map` does nothing — the error flows straight through.
 
@@ -19,9 +21,9 @@ The transformation **cannot fail**: building a DTO, formatting, projecting a fie
 
 | You want to… | Use instead |
 |---|---|
-| a step that **can fail** (returns `AxisResult`) | [`Then`](then.md) |
-| **observe** the value without transforming it | [`Tap`](tap.md) |
-| transform **errors**, not the value | [`MapError`](map-errors.md) |
+| a step that **can fail** (returns `AxisResult`) | [`Then`](/teste-docs/then) |
+| **observe** the value without transforming it | [`Tap`](/teste-docs/tap) |
+| transform **errors**, not the value | [`MapError`](/teste-docs/map-errors) |
 
 ---
 
@@ -29,9 +31,9 @@ The transformation **cannot fail**: building a DTO, formatting, projecting a fie
 
 | Method | Signature | Where |
 |---|---|---|
-| `Map` | `T → TNew` | sync · `Task` · `ValueTask` · [+CT](cancellation.md) |
+| `Map` | `T → TNew` | sync · `Task` · `ValueTask` · [+CT](/teste-docs/cancellation) |
 | `Select` | `T → TNew` (LINQ syntax) | sync |
-| `Map((a, b) => …)` | destructures the tuple from [`Zip`](zip.md) | `Task` (tuples T2–T4) |
+| `Map((a, b) => …)` | destructures the tuple from [`Zip`](/teste-docs/zip) | `Task` (tuples T2–T4) |
 
 ```csharp
 // fluent
@@ -63,10 +65,10 @@ public Task<AxisResult<GetExternalApiByIdResponse>> HandleAsync(GetExternalApiBy
 
 ## See also
 
-- [Chain · `Then`](then.md) — when the next step can fail
-- [Combine · `Zip`](zip.md) — keep two values and destructure them in `Map`
-- [Side effects · `Tap`](tap.md) — observe without transforming
+- [Chain · `Then`](/teste-docs/then) — when the next step can fail
+- [Combine · `Zip`](/teste-docs/zip) — keep two values and destructure them in `Map`
+- [Side effects · `Tap`](/teste-docs/tap) — observe without transforming
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

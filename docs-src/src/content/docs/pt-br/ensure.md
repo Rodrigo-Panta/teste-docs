@@ -1,6 +1,8 @@
 ---
-title: Garantir · `Ensure`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Garantir · `Ensure`
 
 > Valida um invariante **dentro** do pipeline. Se a guarda falhar, a trilha vira falha e o resto é pulado.
 

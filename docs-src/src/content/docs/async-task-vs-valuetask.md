@@ -1,6 +1,8 @@
 ---
-title: Task vs ValueTask · which async to use
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# `Task` vs `ValueTask` · which async to use
 
 > Every async method in AxisResult has two variants: `Task` and `ValueTask`. **When in doubt, use `Task`.** This page tells you exactly when `ValueTask` pays off — because not every dev has this at the tip of their tongue.
 
@@ -40,15 +42,15 @@ Every composition (`ThenAsync`, `MapAsync`, `TapAsync`…) works the same in bot
 
 **Why it pays off:** in a cache resolver that hits 95% of the time synchronously, `ValueTask` eliminates the `Task` allocation on almost every call — without changing a line of the composition logic above.
 
-> Reference: the zero-allocation behavior of `ValueTask<T>` on synchronous completions is documented by the .NET team — see Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](https://devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask/).
+> Reference: the zero-allocation behavior of `ValueTask<T>` on synchronous completions is documented by the .NET team — see Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](/teste-docs/understanding-the-whys-whats-and-whens-of-valuetask).
 
 ---
 
 ## See also
 
-- [Chain · `Then`](then.md) — the pipeline that gets the async variants
-- [Cancellation](cancellation.md) — the variants with `CancellationToken`
+- [Chain · `Then`](/teste-docs/then) — the pipeline that gets the async variants
+- [Cancellation](/teste-docs/cancellation) — the variants with `CancellationToken`
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

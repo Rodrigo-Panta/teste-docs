@@ -1,6 +1,8 @@
 ---
-title: Exceções na borda · `Try` e adaptadores
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Exceções na borda · `Try` e adaptadores
 
 > "Exceções na borda, resultados em todo o resto." Esta página mostra como converter superfícies de infraestrutura que lançam exceções (banco, HTTP, brokers) em `AxisResult` num único ponto — e o que o `Try` **não** captura.
 

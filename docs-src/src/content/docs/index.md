@@ -1,5 +1,6 @@
 ---
-title: AxisResult — Documentation
+title: "AxisResult - Documentation"
+description: This is a page in my Starlight-powered site (testing publishing workflow - with scripts)
 ---
 
 > 🌐 [Português (documentação navegável)](/teste-docs/index.html)

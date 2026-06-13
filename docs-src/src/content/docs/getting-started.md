@@ -1,6 +1,8 @@
 ---
-title: Getting started · installation and usage
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Getting started · installation and usage
 
 > Install the package, create results, inspect them and chain the first operation — the minimum to get off the ground in a few minutes.
 
@@ -35,7 +37,7 @@ AxisResult result = AxisResult.Try(() => riskyOperation());
 AxisResult<int> parsed = AxisResult.Try(() => int.Parse(input));
 ```
 
-> `AxisResult.Try` is for the infrastructure **boundary** — see [Exceptions at the boundary · `Try`](boundary-and-try.md).
+> `AxisResult.Try` is for the infrastructure **boundary** — see [Exceptions at the boundary · `Try`](/teste-docs/boundary-and-try).
 
 ---
 
@@ -54,7 +56,7 @@ var message = result.Match(
     onFailure: errors => $"Failed: {errors[0].Code}");
 ```
 
-> Prefer [`Match`](match.md) or safe deconstruction to accessing `.Value` directly — `.Value` throws on a failure.
+> Prefer [`Match`](/teste-docs/match) or safe deconstruction to accessing `.Value` directly — `.Value` throws on a failure.
 
 ---
 
@@ -74,11 +76,11 @@ var result = await GetUserAsync(userId)
 
 ## See also
 
-- [Railway-Oriented Programming](railway-oriented-programming.md) — the why behind the model, in 5 minutes
-- [Chain · `Then`](then.md) — the heart of the pipeline
-- [Transform · `Map`](map.md) — the transformation that cannot fail
-- [API reference](api-reference.md) — every method in one table
+- [Railway-Oriented Programming](/teste-docs/railway-oriented-programming) — the why behind the model, in 5 minutes
+- [Chain · `Then`](/teste-docs/then) — the heart of the pipeline
+- [Transform · `Map`](/teste-docs/map) — the transformation that cannot fail
+- [API reference](/teste-docs/api-reference) — every method in one table
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

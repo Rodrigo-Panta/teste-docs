@@ -1,6 +1,8 @@
 ---
-title: Remapear erros · `MapError`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Remapear erros · `MapError`
 
 > Reescreve os erros da trilha de falha — útil para **traduzir** códigos e tipos quando um resultado cruza uma fronteira de camada ou de contexto.
 

@@ -1,6 +1,8 @@
 ---
-title: Railway-Oriented Programming · o porquê
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Railway-Oriented Programming · o porquê
 
 > Antes de aprender os operadores, entenda o problema que eles resolvem. Esta página mostra o "C# corporativo" típico, por que ele dói, e como o modelo de dois trilhos o desmonta.
 

@@ -1,6 +1,8 @@
 ---
-title: Chain · `Then`
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# Chain · `Then`
 
 > **The heart of the railway.** `Then` chains a step that **can fail**. If it fails, every following step is skipped — never again an `if (result.IsFailure) return;`.
 
@@ -22,9 +24,9 @@ Use `Then` when the next step **returns an `AxisResult`** (it can fail) and you 
 
 | You want to… | Use instead |
 |---|---|
-| transform the value with something that **cannot fail** (build a DTO) | [`Map`](map.md) |
-| **observe** the value (log, metric) without changing the rail | [`Tap`](tap.md) |
-| keep **both** values, the old one and the new one | [`Zip`](zip.md) |
+| transform the value with something that **cannot fail** (build a DTO) | [`Map`](/teste-docs/map) |
+| **observe** the value (log, metric) without changing the rail | [`Tap`](/teste-docs/tap) |
+| keep **both** values, the old one and the new one | [`Zip`](/teste-docs/zip) |
 
 ---
 
@@ -44,7 +46,7 @@ The behavior depends on **what the delegate returns**, not on the method name:
 
 ## Available overloads
 
-Every form exists for the synchronous `AxisResult<T>`, for `Task<AxisResult<T>>` and `ValueTask<AxisResult<T>>` pipelines. Each one also has a [`CancellationToken`-aware](cancellation.md) variant, where the delegate receives the token as its last parameter.
+Every form exists for the synchronous `AxisResult<T>`, for `Task<AxisResult<T>>` and `ValueTask<AxisResult<T>>` pipelines. Each one also has a [`CancellationToken`-aware](/teste-docs/cancellation) variant, where the delegate receives the token as its last parameter.
 
 ```csharp
 // replaces the value
@@ -114,12 +116,12 @@ public Task<AxisResult> HandleAsync(DeleteExternalApiCommand cmd)
 
 ## See also
 
-- [`Map`](map.md) — transform a value that cannot fail
-- [`Ensure`](ensure.md) — guarantee an invariant inline (`RequireNotFound`, `WithValue`)
-- [`Zip`](zip.md) — keep the old value *and* a new one
-- [Errors and types](errors-and-types.md) — what an `AxisError` carries and the 12 categories
-- [`Task` vs `ValueTask`](async-task-vs-valuetask.md) — which async form to chain
+- [`Map`](/teste-docs/map) — transform a value that cannot fail
+- [`Ensure`](/teste-docs/ensure) — guarantee an invariant inline (`RequireNotFound`, `WithValue`)
+- [`Zip`](/teste-docs/zip) — keep the old value *and* a new one
+- [Errors and types](/teste-docs/errors-and-types) — what an `AxisError` carries and the 12 categories
+- [`Task` vs `ValueTask`](/teste-docs/async-task-vs-valuetask) — which async form to chain
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

@@ -1,6 +1,8 @@
 ---
-title: API reference
+title: Hello, World!
+description: This is a page in my Starlight-powered site
 ---
+# API reference
 
 > The complete operator catalog, grouped by responsibility. Use it for lookup — each group has a detail page with examples.
 
@@ -21,7 +23,7 @@ title: API reference
 | Implicit: `value` | assign any value where `AxisResult<T>` is expected |
 | Implicit: `AxisError` | assign an error where `AxisResult` is expected |
 
-→ [Getting started](getting-started.md) · [Exceptions at the boundary · `Try`](boundary-and-try.md)
+→ [Getting started](/teste-docs/getting-started) · [Exceptions at the boundary · `Try`](/teste-docs/boundary-and-try)
 
 ---
 
@@ -37,7 +39,7 @@ title: API reference
 | `ToAxisResult` | `T -> AxisResult` | chain to a failable side effect, returns an `AxisResult` with no value |
 | `ToAxisResultAsync` | async version of `ToAxisResult` | |
 
-→ [Transform · `Map`](map.md) · [Chain · `Then`](then.md)
+→ [Transform · `Map`](/teste-docs/map) · [Chain · `Then`](/teste-docs/then)
 
 ---
 
@@ -50,7 +52,7 @@ title: API reference
 | `TapError(action)` | run side effect on failure (logging, metrics) |
 | `TapErrorAsync(func)` | async side effect on failure |
 
-→ [Side effects · `Tap`](tap.md)
+→ [Side effects · `Tap`](/teste-docs/tap)
 
 ---
 
@@ -62,7 +64,7 @@ title: API reference
 | `Ensure(func)` | delegated validation — `func` returns `AxisResult` |
 | `EnsureAsync` | async versions |
 
-→ [Ensure · `Ensure`](ensure.md)
+→ [Ensure · `Ensure`](/teste-docs/ensure)
 
 ---
 
@@ -72,7 +74,7 @@ title: API reference
 |--------|-------------|
 | `ActionAsync(func)` | run a failable operation (`T -> Task<AxisResult>`) and **preserve the original value** on success. Unlike `ThenAsync`, which replaces the value, `ActionAsync` keeps it — ideal for domain validation, persistence, or any step where you need the value downstream |
 
-→ [Chain · `Then`](then.md)
+→ [Chain · `Then`](/teste-docs/then)
 
 ---
 
@@ -85,7 +87,7 @@ title: API reference
 | Chained: `.Zip().Zip()` | build tuples up to `(T1, T2, T3, T4)` |
 | `MapAsync((a, b) => ...)` | destructure tuples in the mapper |
 
-→ [Combine · `Zip`](zip.md)
+→ [Combine · `Zip`](/teste-docs/zip)
 
 ---
 
@@ -100,7 +102,7 @@ title: API reference
 | `ZipParallelAsync(() => other)` | run an independent op concurrently, zip into tuple, accumulate errors if both fail |
 | `ZipParallelAsync(ct => other, ct)` | CT-aware variant |
 
-→ [Aggregate · `Combine`/`All`](aggregate.md) · [Combine · `Zip`](zip.md)
+→ [Aggregate · `Combine`/`All`](/teste-docs/aggregate) · [Combine · `Zip`](/teste-docs/zip)
 
 ---
 
@@ -117,7 +119,7 @@ title: API reference
 | `OrElse(fallback)` | try an alternative operation |
 | `OrElse(fallback, combineErrors: true)` | alternative with error accumulation |
 
-→ [Recover · `Recover`](recover.md)
+→ [Recover · `Recover`](/teste-docs/recover)
 
 ---
 
@@ -129,7 +131,7 @@ title: API reference
 | `RequireNotFoundAsync(error)` | async version |
 | `WithValueAsync(value)` | promote `AxisResult` to `AxisResult<T>` with a value |
 
-→ [Ensure · `Ensure`](ensure.md)
+→ [Ensure · `Ensure`](/teste-docs/ensure)
 
 ---
 
@@ -141,7 +143,7 @@ title: API reference
 | `MapError(func<list>)` | transform/filter the entire error list |
 | `MapErrorAsync` | async versions |
 
-→ [Remap errors · `MapError`](map-errors.md)
+→ [Remap errors · `MapError`](/teste-docs/map-errors)
 
 ---
 
@@ -152,7 +154,7 @@ title: API reference
 | `Match(onSuccess, onFailure)` | convert to a final type — runs exactly one branch |
 | `MatchAsync` | async version |
 
-→ [Exit · `Match`](match.md)
+→ [Exit · `Match`](/teste-docs/match)
 
 ---
 
@@ -164,7 +166,7 @@ title: API reference
 | `from x in r1 from y in r2 select ...` | `r1.Then(x => r2).Map(...)` |
 | `SelectManyAsync` | async LINQ chaining |
 
-→ [LINQ query syntax](linq-query-syntax.md)
+→ [LINQ query syntax](/teste-docs/linq-query-syntax)
 
 ---
 
@@ -175,7 +177,7 @@ title: API reference
 | `AsTaskAsync()` | wrap a sync result in `Task` |
 | `AsValueTaskAsync()` | wrap a sync result in `ValueTask` |
 
-→ [`Task` vs `ValueTask`](async-task-vs-valuetask.md)
+→ [`Task` vs `ValueTask`](/teste-docs/async-task-vs-valuetask)
 
 ---
 
@@ -197,7 +199,7 @@ Every core async operator has a CT-aware overload whose delegate receives the to
 | `ActionAsync` | `(T, CancellationToken) => Task<AxisResult>` (preserves value) |
 | `ZipParallelAsync` | `(CancellationToken) => Task<AxisResult<TNew>>` |
 
-→ [Cancellation](cancellation.md)
+→ [Cancellation](/teste-docs/cancellation)
 
 ---
 
@@ -208,16 +210,16 @@ Every core async operator has a CT-aware overload whose delegate receives the to
 | `var (isSuccess, errors) = result` | `AxisResult` |
 | `var (isSuccess, value, errors) = result` | `AxisResult<T>` (`value` is `default` on failure) |
 
-→ [Ergonomics](ergonomics.md)
+→ [Ergonomics](/teste-docs/ergonomics)
 
 ---
 
 ## See also
 
-- [Getting started](getting-started.md) — how to create and inspect results
-- [Chain · `Then`](then.md) — the central railway operator
-- [Full documentation](../../README.md) — the map of the whole documentation
+- [Getting started](/teste-docs/getting-started) — how to create and inspect results
+- [Chain · `Then`](/teste-docs/then) — the central railway operator
+- [Full documentation](/teste-docs/index.html) — the map of the whole documentation
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)
