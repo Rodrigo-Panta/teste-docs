@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: EncadearThen
 ---
-# Encadear · `Then`
 
 > **O coração do railway.** `Then` encadeia um passo que **pode falhar**. Se ele falhar, todos os passos seguintes são pulados — nunca mais um `if (result.IsFailure) return;`.
 

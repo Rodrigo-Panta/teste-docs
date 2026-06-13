@@ -1,6 +1,5 @@
 ---
-title: "AxisResult - Documentation"
-description: This is a page in my Starlight-powered site (testing publishing workflow - with scripts)
+title: AxisResultDocumentation
 ---
 
 

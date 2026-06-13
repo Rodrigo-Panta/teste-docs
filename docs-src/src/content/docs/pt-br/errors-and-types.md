@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: ErrosetiposAxisError
 ---
-# Erros e tipos · `AxisError`
 
 > Um erro no AxisResult é um **valor**, não uma exceção. Cada `AxisError` carrega só duas coisas: um **`Code`** estável e um **`Type`** (categoria).
 

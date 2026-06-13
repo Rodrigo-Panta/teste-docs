@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: EfeitosTap
 ---
-# Efeitos · `Tap`
 
 > Executa um efeito colateral (log, métrica, evento) e **devolve o resultado intacto**. `Tap` não muda a trilha nem o valor — ele só observa.
 

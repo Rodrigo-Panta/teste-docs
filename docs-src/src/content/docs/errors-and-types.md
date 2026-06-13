@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: ErrorsandtypesAxisError
 ---
-# Errors and types · `AxisError`
 
 > An error in AxisResult is a **value**, not an exception. Each `AxisError` carries only two things: a stable **`Code`** and a **`Type`** (category).
 

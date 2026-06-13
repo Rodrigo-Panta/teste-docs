@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: LINQquerysyntax
 ---
-# LINQ query syntax
 
 > For those who prefer *comprehension* syntax, AxisResult supports `from … select …`. It's equivalent to fluent chaining — use whichever form reads better for your team.
 

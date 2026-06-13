@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: TransformarMap
 ---
-# Transformar · `Map`
 
 > Transforma o valor da trilha de sucesso com uma função que **não pode falhar**. Na trilha de falha, `Map` não faz nada — o erro segue direto.
 
