@@ -17,7 +17,7 @@ async function processFile(file) {
 
   // Removes the line containing the locale reference (e.g., "🌐 English" or "🌐 Português")
   const updated = original.replace(
-    /^.*🌐.*/g,
+    /^.*🌐.*$\n?/gm,
     ""
   );
 
