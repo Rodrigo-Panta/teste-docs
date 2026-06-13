@@ -16,8 +16,8 @@ Você precisa de 2 a 4 valores de operações distintas para montar um resultado
 
 | Você quer… | Use no lugar |
 |---|---|
-| reduzir **N** resultados do **mesmo** tipo a um | [`Combine`/`All`](./aggregate.md) |
-| substituir o valor (não acumular) | [`Then`](./then.md) |
+| reduzir **N** resultados do **mesmo** tipo a um | [`Combine`/`All`](/teste-docs/docs/pt-br/aggregate) |
+| substituir o valor (não acumular) | [`Then`](/teste-docs/docs/pt-br/then) |
 
 ---
 
@@ -67,6 +67,6 @@ var dashboard = await GetUserAsync(userId)
 
 ## Veja também
 
-- [Transformar · `Map`](./map.md) — desestruturar a tupla com `(a, b) => …`
-- [Agregar · `Combine`/`All`](./aggregate.md) — para N resultados do mesmo tipo
-- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — escolha do async no `ZipParallel`
+- [Transformar · `Map`](/teste-docs/docs/pt-br/map) — desestruturar a tupla com `(a, b) => …`
+- [Agregar · `Combine`/`All`](/teste-docs/docs/pt-br/aggregate) — para N resultados do mesmo tipo
+- [`Task` vs `ValueTask`](/teste-docs/docs/pt-br/async-task-vs-valuetask) — escolha do async no `ZipParallel`

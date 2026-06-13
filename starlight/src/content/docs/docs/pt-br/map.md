@@ -21,9 +21,9 @@ A transformação **não pode falhar**: montar um DTO, formatar, projetar um cam
 
 | Você quer… | Use no lugar |
 |---|---|
-| um passo que **pode falhar** (retorna `AxisResult`) | [`Then`](./then.md) |
-| **observar** o valor sem transformá-lo | [`Tap`](./tap.md) |
-| transformar **erros**, não o valor | [`MapError`](./map-errors.md) |
+| um passo que **pode falhar** (retorna `AxisResult`) | [`Then`](/teste-docs/docs/pt-br/then) |
+| **observar** o valor sem transformá-lo | [`Tap`](/teste-docs/docs/pt-br/tap) |
+| transformar **erros**, não o valor | [`MapError`](/teste-docs/docs/pt-br/map-errors) |
 
 ---
 
@@ -31,9 +31,9 @@ A transformação **não pode falhar**: montar um DTO, formatar, projetar um cam
 
 | Método | Assinatura | Onde |
 |---|---|---|
-| `Map` | `T → TNew` | sync · `Task` · `ValueTask` · [+CT](./cancellation.md) |
+| `Map` | `T → TNew` | sync · `Task` · `ValueTask` · [+CT](/teste-docs/docs/pt-br/cancellation) |
 | `Select` | `T → TNew` (sintaxe LINQ) | sync |
-| `Map((a, b) => …)` | desestrutura a tupla de [`Zip`](./zip.md) | `Task` (tuplas T2–T4) |
+| `Map((a, b) => …)` | desestrutura a tupla de [`Zip`](/teste-docs/docs/pt-br/zip) | `Task` (tuplas T2–T4) |
 
 ```csharp
 // fluente
@@ -65,6 +65,6 @@ public Task<AxisResult<GetExternalApiByIdResponse>> HandleAsync(GetExternalApiBy
 
 ## Veja também
 
-- [Encadear · `Then`](./then.md) — quando o próximo passo pode falhar
-- [Combinar · `Zip`](./zip.md) — manter dois valores e desestruturar no `Map`
-- [Efeitos · `Tap`](./tap.md) — observar sem transformar
+- [Encadear · `Then`](/teste-docs/docs/pt-br/then) — quando o próximo passo pode falhar
+- [Combinar · `Zip`](/teste-docs/docs/pt-br/zip) — manter dois valores e desestruturar no `Map`
+- [Efeitos · `Tap`](/teste-docs/docs/pt-br/tap) — observar sem transformar

@@ -39,10 +39,10 @@ Num `AxisResult<T>` que falhou, `value` é `default(T)` (não uma exceção) —
 
 ## Veja também
 
-- [Sair · `Match`](./match.md) — a outra forma de extrair o valor com segurança
-- [Erros e tipos](./errors-and-types.md) — o que o `[DebuggerDisplay]` de um `AxisError` mostra
-- [Referência da API](./api-reference.md) — a tabela de desestruturação
+- [Sair · `Match`](/teste-docs/docs/pt-br/match) — a outra forma de extrair o valor com segurança
+- [Erros e tipos](/teste-docs/docs/pt-br/errors-and-types) — o que o `[DebuggerDisplay]` de um `AxisError` mostra
+- [Referência da API](/teste-docs/docs/pt-br/api-reference) — a tabela de desestruturação
 
 ---
 
-↩ [Voltar à documentação do AxisResult](./README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/docs/pt-br/index.html)

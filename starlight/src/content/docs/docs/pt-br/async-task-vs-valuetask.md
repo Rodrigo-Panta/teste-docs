@@ -42,11 +42,11 @@ Toda composição (`ThenAsync`, `MapAsync`, `TapAsync`…) funciona igual nos do
 
 **Por que compensa:** num resolver de cache que acerta 95% das vezes de forma síncrona, o `ValueTask` elimina a alocação do `Task` em quase todas as chamadas — sem mudar uma linha da lógica de composição acima.
 
-> Referência: o comportamento zero-alocação do `ValueTask<T>` em conclusões síncronas é documentado pela equipe .NET — ver Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](./https://devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask/).
+> Referência: o comportamento zero-alocação do `ValueTask<T>` em conclusões síncronas é documentado pela equipe .NET — ver Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](/teste-docs/docs/pt-br/https:/devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask).
 
 ---
 
 ## Veja também
 
-- [Encadear · `Then`](./then.md) — o pipeline que ganha as variantes async
-- [Cancelamento](./cancellation.md) — as variantes com `CancellationToken`
+- [Encadear · `Then`](/teste-docs/docs/pt-br/then) — o pipeline que ganha as variantes async
+- [Cancelamento](/teste-docs/docs/pt-br/cancellation) — as variantes com `CancellationToken`

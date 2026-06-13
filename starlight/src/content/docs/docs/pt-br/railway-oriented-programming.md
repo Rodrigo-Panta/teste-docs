@@ -119,10 +119,10 @@ Não é uma ideia nova — vem da programação funcional (o `Either` de Haskell
 
 ## Veja também
 
-- [Primeiros passos](./getting-started.md) — instalar e escrever o primeiro pipeline
-- [Encadear · `Then`](./then.md) — a chave de desvio mais importante
-- [Por que AxisResult?](./why-axisresult.md) — comparação com outras libraries de Result
+- [Primeiros passos](/teste-docs/docs/pt-br/getting-started) — instalar e escrever o primeiro pipeline
+- [Encadear · `Then`](/teste-docs/docs/pt-br/then) — a chave de desvio mais importante
+- [Por que AxisResult?](/teste-docs/docs/pt-br/why-axisresult) — comparação com outras libraries de Result
 
 ---
 
-↩ [Voltar à documentação do AxisResult](./README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/docs/pt-br/index.html)

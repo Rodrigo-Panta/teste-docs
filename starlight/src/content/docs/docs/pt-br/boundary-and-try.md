@@ -16,8 +16,8 @@ Em qualquer ponto onde código externo lança exceções: drivers de banco, `Htt
 
 | Você quer… | Use no lugar |
 |---|---|
-| encadear passos que já retornam `AxisResult` | [`Then`](./then.md) |
-| recuperar de uma falha transiente | [`Recover`](./recover.md) |
+| encadear passos que já retornam `AxisResult` | [`Then`](/teste-docs/docs/pt-br/then) |
+| recuperar de uma falha transiente | [`Recover`](/teste-docs/docs/pt-br/recover) |
 
 ---
 
@@ -65,10 +65,10 @@ Para `HttpClient`, drivers de banco, brokers de mensagem e qualquer outra infrae
 
 ## Veja também
 
-- [Encadear · `Then`](./then.md) — o que consome o `AxisResult` que a borda produz
-- [Erros e tipos](./errors-and-types.md) — os tipos para os quais mapear cada exceção
-- [Remapear erros · `MapError`](./map-errors.md) — traduzir códigos ao cruzar camadas
+- [Encadear · `Then`](/teste-docs/docs/pt-br/then) — o que consome o `AxisResult` que a borda produz
+- [Erros e tipos](/teste-docs/docs/pt-br/errors-and-types) — os tipos para os quais mapear cada exceção
+- [Remapear erros · `MapError`](/teste-docs/docs/pt-br/map-errors) — traduzir códigos ao cruzar camadas
 
 ---
 
-↩ [Voltar à documentação do AxisResult](./README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/docs/pt-br/index.html)

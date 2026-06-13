@@ -16,8 +16,8 @@ At any point where external code throws exceptions: database drivers, `HttpClien
 
 | You want to… | Use instead |
 |---|---|
-| chain steps that already return `AxisResult` | [`Then`](./then.md) |
-| recover from a transient failure | [`Recover`](./recover.md) |
+| chain steps that already return `AxisResult` | [`Then`](/teste-docs/docs/en-us/then) |
+| recover from a transient failure | [`Recover`](/teste-docs/docs/en-us/recover) |
 
 ---
 
@@ -65,10 +65,10 @@ For `HttpClient`, database drivers, message brokers and any other infrastructure
 
 ## See also
 
-- [Chain · `Then`](./then.md) — what consumes the `AxisResult` the boundary produces
-- [Errors and types](./errors-and-types.md) — the types to map each exception to
-- [Remap errors · `MapError`](./map-errors.md) — translate codes when crossing layers
+- [Chain · `Then`](/teste-docs/docs/en-us/then) — what consumes the `AxisResult` the boundary produces
+- [Errors and types](/teste-docs/docs/en-us/errors-and-types) — the types to map each exception to
+- [Remap errors · `MapError`](/teste-docs/docs/en-us/map-errors) — translate codes when crossing layers
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

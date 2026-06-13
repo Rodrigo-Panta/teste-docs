@@ -39,10 +39,10 @@ On a failed `AxisResult<T>`, `value` is `default(T)` (not an exception) — the 
 
 ## See also
 
-- [Exit · `Match`](./match.md) — the other way to extract the value safely
-- [Errors and types](./errors-and-types.md) — what an `AxisError`'s `[DebuggerDisplay]` shows
-- [API reference](./api-reference.md) — the deconstruction table
+- [Exit · `Match`](/teste-docs/docs/en-us/match) — the other way to extract the value safely
+- [Errors and types](/teste-docs/docs/en-us/errors-and-types) — what an `AxisError`'s `[DebuggerDisplay]` shows
+- [API reference](/teste-docs/docs/en-us/api-reference) — the deconstruction table
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

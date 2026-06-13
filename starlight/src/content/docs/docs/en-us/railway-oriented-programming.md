@@ -119,10 +119,10 @@ This isn't a new idea — it comes from functional programming (Haskell's `Eithe
 
 ## See also
 
-- [Getting started](./getting-started.md) — install and write your first pipeline
-- [Chain · `Then`](./then.md) — the most important switch
-- [Why AxisResult?](./why-axisresult.md) — comparison with other Result libraries
+- [Getting started](/teste-docs/docs/en-us/getting-started) — install and write your first pipeline
+- [Chain · `Then`](/teste-docs/docs/en-us/then) — the most important switch
+- [Why AxisResult?](/teste-docs/docs/en-us/why-axisresult) — comparison with other Result libraries
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

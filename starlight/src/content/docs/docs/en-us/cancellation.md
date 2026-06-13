@@ -45,9 +45,9 @@ In apps with dependency injection, register the request's `CancellationToken` as
 
 ## See also
 
-- [`Task` vs `ValueTask`](./async-task-vs-valuetask.md) — the two async families that get CT variants
-- [Chain · `Then`](./then.md) — the most common operator to receive the token
+- [`Task` vs `ValueTask`](/teste-docs/docs/en-us/async-task-vs-valuetask) — the two async families that get CT variants
+- [Chain · `Then`](/teste-docs/docs/en-us/then) — the most common operator to receive the token
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

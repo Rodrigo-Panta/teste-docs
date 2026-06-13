@@ -37,7 +37,7 @@ AxisResult result = AxisResult.Try(() => riskyOperation());
 AxisResult<int> parsed = AxisResult.Try(() => int.Parse(input));
 ```
 
-> `AxisResult.Try` é para a **borda** de infraestrutura — veja [Exceções na borda · `Try`](./boundary-and-try.md).
+> `AxisResult.Try` é para a **borda** de infraestrutura — veja [Exceções na borda · `Try`](/teste-docs/docs/pt-br/boundary-and-try).
 
 ---
 
@@ -56,7 +56,7 @@ var message = result.Match(
     onFailure: errors => $"Failed: {errors[0].Code}");
 ```
 
-> Prefira [`Match`](./match.md) ou a desestruturação segura a acessar `.Value` direto — `.Value` lança numa falha.
+> Prefira [`Match`](/teste-docs/docs/pt-br/match) ou a desestruturação segura a acessar `.Value` direto — `.Value` lança numa falha.
 
 ---
 
@@ -76,11 +76,11 @@ var result = await GetUserAsync(userId)
 
 ## Veja também
 
-- [Railway-Oriented Programming](./railway-oriented-programming.md) — o porquê do modelo, em 5 minutos
-- [Encadear · `Then`](./then.md) — o coração do pipeline
-- [Transformar · `Map`](./map.md) — a transformação que não pode falhar
-- [Referência da API](./api-reference.md) — todos os métodos numa tabela
+- [Railway-Oriented Programming](/teste-docs/docs/pt-br/railway-oriented-programming) — o porquê do modelo, em 5 minutos
+- [Encadear · `Then`](/teste-docs/docs/pt-br/then) — o coração do pipeline
+- [Transformar · `Map`](/teste-docs/docs/pt-br/map) — a transformação que não pode falhar
+- [Referência da API](/teste-docs/docs/pt-br/api-reference) — todos os métodos numa tabela
 
 ---
 
-↩ [Voltar à documentação do AxisResult](./README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/docs/pt-br/index.html)

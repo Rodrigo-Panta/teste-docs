@@ -54,7 +54,7 @@ return result.Match(
 
 This way: small, canonical codes (`USER_NOT_FOUND`); multiple UIs (REST, gRPC, CLI) render the same code in different ways; tests assert on **codes**, not on English prose; no personal data leaks into the error payload.
 
-> Need to pass **details** (id, attempted quantity)? Emit **multiple `AxisError`** — the error list is already the natural collection for that. See [Aggregate · `Combine`/`All`](./aggregate.md).
+> Need to pass **details** (id, attempted quantity)? Emit **multiple `AxisError`** — the error list is already the natural collection for that. See [Aggregate · `Combine`/`All`](/teste-docs/docs/en-us/aggregate).
 
 ---
 
@@ -73,10 +73,10 @@ if (error.IsTransient)   // true for ServiceUnavailable, Timeout, TooManyRequest
 
 ## See also
 
-- [Remap errors · `MapError`](./map-errors.md) — rewrite codes/types when crossing layers
-- [Recover · `Recover`](./recover.md) — return from the failure rail to the success rail
-- [Exit · `Match`](./match.md) — convert the final result into an HTTP response
+- [Remap errors · `MapError`](/teste-docs/docs/en-us/map-errors) — rewrite codes/types when crossing layers
+- [Recover · `Recover`](/teste-docs/docs/en-us/recover) — return from the failure rail to the success rail
+- [Exit · `Match`](/teste-docs/docs/en-us/match) — convert the final result into an HTTP response
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

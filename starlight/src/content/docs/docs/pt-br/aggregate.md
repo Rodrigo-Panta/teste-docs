@@ -4,7 +4,7 @@ description: This is a page in my Starlight-powered site
 ---
 # Agregar · `Combine` / `All`
 
-> Reduz **muitos** resultados a **um**. Diferente do [`Zip`](./zip.md) (que combina valores diferentes numa tupla), aqui você dobra uma **coleção** — e coleta **todos** os erros, não só o primeiro.
+> Reduz **muitos** resultados a **um**. Diferente do [`Zip`](/teste-docs/docs/pt-br/zip) (que combina valores diferentes numa tupla), aqui você dobra uma **coleção** — e coleta **todos** os erros, não só o primeiro.
 
 ---
 
@@ -51,12 +51,12 @@ var result = await AxisResult.AllAsync(
 ## `Combine`/`All` vs `Zip`
 
 - **`Combine`/`All`** → N itens do **mesmo** tipo → uma lista (ou um void agregado).
-- **[`Zip`](./zip.md)** → 2–4 valores **diferentes** → uma tupla.
+- **[`Zip`](/teste-docs/docs/pt-br/zip)** → 2–4 valores **diferentes** → uma tupla.
 
 ---
 
 ## Veja também
 
-- [Combinar · `Zip`](./zip.md) — para valores heterogêneos numa tupla
-- [Erros e tipos](./errors-and-types.md) — por que acumular todos os erros importa
-- [Garantir · `Ensure`](./ensure.md) — validação de um único valor na trilha
+- [Combinar · `Zip`](/teste-docs/docs/pt-br/zip) — para valores heterogêneos numa tupla
+- [Erros e tipos](/teste-docs/docs/pt-br/errors-and-types) — por que acumular todos os erros importa
+- [Garantir · `Ensure`](/teste-docs/docs/pt-br/ensure) — validação de um único valor na trilha

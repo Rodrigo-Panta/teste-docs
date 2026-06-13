@@ -16,8 +16,8 @@ Guarantee a condition about the current value (enough stock, valid status) or en
 
 | You want to…                               | Use instead             |
 |--------------------------------------------|-------------------------|
-| transform the value                        | [`Map`](./map.md)         |
-| chain a step that produces a new value     | [`Then`](./then.md)       |
+| transform the value                        | [`Map`](/teste-docs/docs/en-us/map)         |
+| chain a step that produces a new value     | [`Then`](/teste-docs/docs/en-us/then)       |
 | automatic validation **before** the handler | (validation pipeline)   |
 
 ---
@@ -31,7 +31,7 @@ Guarantee a condition about the current value (enough stock, valid status) or en
 | `RequireNotFound` | `(AxisError errorIfFound)` | found → fail; `NotFound` → continue as success |
 | `WithValue` | `(value)` | promotes an `AxisResult` (no value) to `AxisResult<T>` |
 
-All have `Async` variants (`Task`/`ValueTask`) and [with `CancellationToken`](./cancellation.md).
+All have `Async` variants (`Task`/`ValueTask`) and [with `CancellationToken`](/teste-docs/docs/en-us/cancellation).
 
 ---
 
@@ -63,10 +63,10 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 
 ## See also
 
-- [Chain · `Then`](./then.md) — the step that follows the guard
-- [Errors and types](./errors-and-types.md) — choosing the right `AxisError` for the failure
-- [Recover · `Recover`](./recover.md) — the opposite: handle the failure and return to success
+- [Chain · `Then`](/teste-docs/docs/en-us/then) — the step that follows the guard
+- [Errors and types](/teste-docs/docs/en-us/errors-and-types) — choosing the right `AxisError` for the failure
+- [Recover · `Recover`](/teste-docs/docs/en-us/recover) — the opposite: handle the failure and return to success
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

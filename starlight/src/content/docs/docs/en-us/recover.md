@@ -4,7 +4,7 @@ description: This is a page in my Starlight-powered site
 ---
 # Recover · `Recover`
 
-> The opposite of [`Then`](./then.md): it operates on the **failure rail**. `Recover` and its relatives bring the pipeline back to success — always in a **deliberate and explicit** way.
+> The opposite of [`Then`](/teste-docs/docs/en-us/then): it operates on the **failure rail**. `Recover` and its relatives bring the pipeline back to success — always in a **deliberate and explicit** way.
 
 ---
 
@@ -16,8 +16,8 @@ Provide a default when something wasn't found, fall back to an alternative sourc
 
 | You want to… | Use instead |
 |---|---|
-| just **observe** the error (log) without recovering | [`TapError`](./tap.md) |
-| **rewrite** the error, not recover | [`MapError`](./map-errors.md) |
+| just **observe** the error (log) without recovering | [`TapError`](/teste-docs/docs/en-us/tap) |
+| **rewrite** the error, not recover | [`MapError`](/teste-docs/docs/en-us/map-errors) |
 
 ---
 
@@ -67,10 +67,10 @@ var user = await FindByEmailAsync(email)
 
 ## See also
 
-- [Errors and types](./errors-and-types.md) — `IsTransient`, types and codes to condition the recovery
-- [Remap errors · `MapError`](./map-errors.md) — transform the error instead of recovering
-- [Ensure · `Ensure`](./ensure.md) — the opposite: take from success to failure
+- [Errors and types](/teste-docs/docs/en-us/errors-and-types) — `IsTransient`, types and codes to condition the recovery
+- [Remap errors · `MapError`](/teste-docs/docs/en-us/map-errors) — transform the error instead of recovering
+- [Ensure · `Ensure`](/teste-docs/docs/en-us/ensure) — the opposite: take from success to failure
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

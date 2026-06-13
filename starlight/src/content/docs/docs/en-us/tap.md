@@ -16,8 +16,8 @@ Write a log, emit a metric, fire a *fire-and-forget* event — without affecting
 
 | You want to… | Use instead |
 |---|---|
-| an effect that **can fail** and must short-circuit | [`Then`](./then.md) |
-| transform the value | [`Map`](./map.md) |
+| an effect that **can fail** and must short-circuit | [`Then`](/teste-docs/docs/en-us/then) |
+| transform the value | [`Map`](/teste-docs/docs/en-us/map) |
 
 ---
 
@@ -28,7 +28,7 @@ Write a log, emit a metric, fire a *fire-and-forget* event — without affecting
 | `Tap` / `TapAsync` | **success** | the value |
 | `TapError` / `TapErrorAsync` | **failure** | the list of `AxisError` |
 
-All return the original result and exist in `Task`/`ValueTask` and [with `CancellationToken`](./cancellation.md).
+All return the original result and exist in `Task`/`ValueTask` and [with `CancellationToken`](/teste-docs/docs/en-us/cancellation).
 
 ---
 
@@ -56,10 +56,10 @@ return CreateOrderAsync(cmd)
 
 ## See also
 
-- [Chain · `Then`](./then.md) — when the effect needs to be able to fail
-- [Remap errors · `MapError`](./map-errors.md) — transform the errors that `TapError` observes
-- [Exit · `Match`](./match.md) — the failure branch at the end of the rail
+- [Chain · `Then`](/teste-docs/docs/en-us/then) — when the effect needs to be able to fail
+- [Remap errors · `MapError`](/teste-docs/docs/en-us/map-errors) — transform the errors that `TapError` observes
+- [Exit · `Match`](/teste-docs/docs/en-us/match) — the failure branch at the end of the rail
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

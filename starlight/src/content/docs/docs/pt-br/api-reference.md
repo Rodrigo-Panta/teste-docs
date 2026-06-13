@@ -23,7 +23,7 @@ description: This is a page in my Starlight-powered site
 | Implícito: `value` | atribui qualquer valor onde se espera `AxisResult<T>` |
 | Implícito: `AxisError` | atribui um erro onde se espera `AxisResult` |
 
-→ [Primeiros passos](getting-started.md) · [Exceções na borda · `Try`](./boundary-and-try.md)
+→ [Primeiros passos](/teste-docs/docs/pt-br/getting-started) · [Exceções na borda · `Try`](/teste-docs/docs/pt-br/boundary-and-try)
 
 ---
 
@@ -39,7 +39,7 @@ description: This is a page in my Starlight-powered site
 | `ToAxisResult` | `T -> AxisResult` | encadeia um efeito falível, retorna um `AxisResult` sem valor |
 | `ToAxisResultAsync` | versão async de `ToAxisResult` | |
 
-→ [Transformar · `Map`](map.md) · [Encadear · `Then`](./then.md)
+→ [Transformar · `Map`](/teste-docs/docs/pt-br/map) · [Encadear · `Then`](/teste-docs/docs/pt-br/then)
 
 ---
 
@@ -52,7 +52,7 @@ description: This is a page in my Starlight-powered site
 | `TapError(action)` | roda efeito na falha (logging, métricas) |
 | `TapErrorAsync(func)` | efeito async na falha |
 
-→ [Efeitos · `Tap`](./tap.md)
+→ [Efeitos · `Tap`](/teste-docs/docs/pt-br/tap)
 
 ---
 
@@ -64,7 +64,7 @@ description: This is a page in my Starlight-powered site
 | `Ensure(func)` | validação delegada — `func` retorna `AxisResult` |
 | `EnsureAsync` | versões async |
 
-→ [Garantir · `Ensure`](./ensure.md)
+→ [Garantir · `Ensure`](/teste-docs/docs/pt-br/ensure)
 
 ---
 
@@ -74,7 +74,7 @@ description: This is a page in my Starlight-powered site
 |--------|-------------|
 | `ActionAsync(func)` | roda uma operação falível (`T -> Task<AxisResult>`) e **preserva o valor original** no sucesso. Diferente de `ThenAsync`, que substitui o valor, `ActionAsync` o mantém — ideal para validação de domínio, persistência, ou qualquer passo em que você precise do valor adiante |
 
-→ [Encadear · `Then`](./then.md)
+→ [Encadear · `Then`](/teste-docs/docs/pt-br/then)
 
 ---
 
@@ -87,7 +87,7 @@ description: This is a page in my Starlight-powered site
 | Encadeado: `.Zip().Zip()` | constrói tuplas até `(T1, T2, T3, T4)` |
 | `MapAsync((a, b) => ...)` | desestrutura tuplas no mapper |
 
-→ [Combinar · `Zip`](./zip.md)
+→ [Combinar · `Zip`](/teste-docs/docs/pt-br/zip)
 
 ---
 
@@ -102,7 +102,7 @@ description: This is a page in my Starlight-powered site
 | `ZipParallelAsync(() => other)` | roda uma op independente em paralelo, junta na tupla, acumula erros se ambos falharem |
 | `ZipParallelAsync(ct => other, ct)` | variante ciente de CT |
 
-→ [Agregar · `Combine`/`All`](aggregate.md) · [Combinar · `Zip`](./zip.md)
+→ [Agregar · `Combine`/`All`](/teste-docs/docs/pt-br/aggregate) · [Combinar · `Zip`](/teste-docs/docs/pt-br/zip)
 
 ---
 
@@ -119,7 +119,7 @@ description: This is a page in my Starlight-powered site
 | `OrElse(fallback)` | tenta uma operação alternativa |
 | `OrElse(fallback, combineErrors: true)` | alternativa com acúmulo de erros |
 
-→ [Recuperar · `Recover`](./recover.md)
+→ [Recuperar · `Recover`](/teste-docs/docs/pt-br/recover)
 
 ---
 
@@ -131,7 +131,7 @@ description: This is a page in my Starlight-powered site
 | `RequireNotFoundAsync(error)` | versão async |
 | `WithValueAsync(value)` | promove `AxisResult` para `AxisResult<T>` com um valor |
 
-→ [Garantir · `Ensure`](./ensure.md)
+→ [Garantir · `Ensure`](/teste-docs/docs/pt-br/ensure)
 
 ---
 
@@ -143,7 +143,7 @@ description: This is a page in my Starlight-powered site
 | `MapError(func<list>)` | transforma/filtra a lista inteira de erros |
 | `MapErrorAsync` | versões async |
 
-→ [Remapear erros · `MapError`](./map-errors.md)
+→ [Remapear erros · `MapError`](/teste-docs/docs/pt-br/map-errors)
 
 ---
 
@@ -154,7 +154,7 @@ description: This is a page in my Starlight-powered site
 | `Match(onSuccess, onFailure)` | converte para um tipo final — roda exatamente um ramo |
 | `MatchAsync` | versão async |
 
-→ [Sair · `Match`](./match.md)
+→ [Sair · `Match`](/teste-docs/docs/pt-br/match)
 
 ---
 
@@ -166,7 +166,7 @@ description: This is a page in my Starlight-powered site
 | `from x in r1 from y in r2 select ...` | `r1.Then(x => r2).Map(...)` |
 | `SelectManyAsync` | encadeamento LINQ async |
 
-→ [Sintaxe de query LINQ](./linq-query-syntax.md)
+→ [Sintaxe de query LINQ](/teste-docs/docs/pt-br/linq-query-syntax)
 
 ---
 
@@ -177,7 +177,7 @@ description: This is a page in my Starlight-powered site
 | `AsTaskAsync()` | embrulha um resultado síncrono em `Task` |
 | `AsValueTaskAsync()` | embrulha um resultado síncrono em `ValueTask` |
 
-→ [`Task` vs `ValueTask`](./async-task-vs-valuetask.md)
+→ [`Task` vs `ValueTask`](/teste-docs/docs/pt-br/async-task-vs-valuetask)
 
 ---
 
@@ -199,7 +199,7 @@ Todo operador async central tem uma sobrecarga ciente de CT cujo delegate recebe
 | `ActionAsync` | `(T, CancellationToken) => Task<AxisResult>` (preserva o valor) |
 | `ZipParallelAsync` | `(CancellationToken) => Task<AxisResult<TNew>>` |
 
-→ [Cancelamento](./cancellation.md)
+→ [Cancelamento](/teste-docs/docs/pt-br/cancellation)
 
 ---
 
@@ -210,16 +210,16 @@ Todo operador async central tem uma sobrecarga ciente de CT cujo delegate recebe
 | `var (isSuccess, errors) = result` | `AxisResult` |
 | `var (isSuccess, value, errors) = result` | `AxisResult<T>` (`value` é `default` na falha) |
 
-→ [Ergonomia](./ergonomics.md)
+→ [Ergonomia](/teste-docs/docs/pt-br/ergonomics)
 
 ---
 
 ## Veja também
 
-- [Primeiros passos](./getting-started.md) — como criar e inspecionar resultados
-- [Encadear · `Then`](./then.md) — o operador central do railway
-- [Documentação completa](./README.md) — o mapa de toda a documentação
+- [Primeiros passos](/teste-docs/docs/pt-br/getting-started) — como criar e inspecionar resultados
+- [Encadear · `Then`](/teste-docs/docs/pt-br/then) — o operador central do railway
+- [Documentação completa](/teste-docs/docs/pt-br/index.html) — o mapa de toda a documentação
 
 ---
 
-↩ [Voltar à documentação do AxisResult](./README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/docs/pt-br/index.html)

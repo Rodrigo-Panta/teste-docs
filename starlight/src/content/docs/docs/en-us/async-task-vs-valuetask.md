@@ -42,15 +42,15 @@ Every composition (`ThenAsync`, `MapAsync`, `TapAsync`…) works the same in bot
 
 **Why it pays off:** in a cache resolver that hits 95% of the time synchronously, `ValueTask` eliminates the `Task` allocation on almost every call — without changing a line of the composition logic above.
 
-> Reference: the zero-allocation behavior of `ValueTask<T>` on synchronous completions is documented by the .NET team — see Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](./https://devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask/).
+> Reference: the zero-allocation behavior of `ValueTask<T>` on synchronous completions is documented by the .NET team — see Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](/teste-docs/docs/en-us/https:/devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask).
 
 ---
 
 ## See also
 
-- [Chain · `Then`](./then.md) — the pipeline that gets the async variants
-- [Cancellation](./cancellation.md) — the variants with `CancellationToken`
+- [Chain · `Then`](/teste-docs/docs/en-us/then) — the pipeline that gets the async variants
+- [Cancellation](/teste-docs/docs/en-us/cancellation) — the variants with `CancellationToken`
 
 ---
 
-↩ [Back to AxisResult docs](../../README.md)
+↩ [Back to AxisResult docs](/teste-docs/index.html)

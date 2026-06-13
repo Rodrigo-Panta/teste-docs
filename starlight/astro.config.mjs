@@ -14,17 +14,34 @@ export default defineConfig({
 			title: 'Axis Result',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/fillippeprata/AxisResult' }],
 			sidebar: [
+
 				{
-					label: 'Guides',
+					label: 'Reference',
 					items: [
-						// Each item here is one entry in the navigation menu.
+						{ label: 'Railway Oriented Programming', link: 'docs/en-us/railway-oriented-programming' },
+						{ label: 'Why AxisResult?', link: 'docs/en-us/why-axisresult' },
+						{ label: 'Getting Started', link: 'docs/en-us/getting-started' },
+						{ label: 'API Reference', link: 'docs/en-us/api-reference' },
 					],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'API',
+					items: [
+						{ label: 'AxisResult', link: 'docs/en-us/api/axisresult' },
+						{ label: 'Result', link: 'docs/en-us/api/result' },
+					],
 				},
 			],
+			defaultLocale: 'en-us',
+			locales: {
+
+				'en-us': {
+					label: 'English',
+				},
+				'pt-br': {
+					label: 'Português',
+				},
+			}
 		}),
 	],
 });
