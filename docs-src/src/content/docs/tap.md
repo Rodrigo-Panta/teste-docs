@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: SideeffectsTap
 ---
-# Side effects · `Tap`
 
 > Runs a side effect (log, metric, event) and **returns the result untouched**. `Tap` changes neither the rail nor the value — it only observes.
 

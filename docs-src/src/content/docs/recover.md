@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: RecoverRecover
 ---
-# Recover · `Recover`
 
 > The opposite of [`Then`](/teste-docs/then): it operates on the **failure rail**. `Recover` and its relatives bring the pipeline back to success — always in a **deliberate and explicit** way.
 

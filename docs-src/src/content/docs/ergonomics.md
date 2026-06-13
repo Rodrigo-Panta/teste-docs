@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: Ergonomicsdeconstructionanddebugger
 ---
-# Ergonomics · deconstruction and debugger
 
 > Small quality-of-life details: deconstruct results with no `try/catch` and see the state directly in the debugger, without expanding private fields.
 

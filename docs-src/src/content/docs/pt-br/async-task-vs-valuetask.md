@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: TaskvsValueTaskqualasyncusar
 ---
-# `Task` vs `ValueTask` · qual async usar
 
 > Todo método async do AxisResult tem duas variantes: `Task` e `ValueTask`. **Na dúvida, use `Task`.** Esta página diz exatamente quando o `ValueTask` compensa — porque nem todo dev tem isso na ponta da língua.
 
@@ -42,7 +40,7 @@ Toda composição (`ThenAsync`, `MapAsync`, `TapAsync`…) funciona igual nos do
 
 **Por que compensa:** num resolver de cache que acerta 95% das vezes de forma síncrona, o `ValueTask` elimina a alocação do `Task` em quase todas as chamadas — sem mudar uma linha da lógica de composição acima.
 
-> Referência: o comportamento zero-alocação do `ValueTask<T>` em conclusões síncronas é documentado pela equipe .NET — ver Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](/teste-docs/pt-br/understanding-the-whys-whats-and-whens-of-valuetask).
+> Referência: o comportamento zero-alocação do `ValueTask<T>` em conclusões síncronas é documentado pela equipe .NET — ver Stephen Toub, [*Understanding the Whys, Whats, and Whens of ValueTask*](https://devblogs.microsoft.com/dotnet/understanding-the-whys-whats-and-whens-of-valuetask/).
 
 ---
 

@@ -1,10 +1,7 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: AxisResultDocumentao
 ---
-# AxisResult — Documentação
 
-> 🌐 [English (README principal)](/teste-docs/pt-br/index.html)
 
 **Railway-Oriented Programming para C#** — uma *Result monad* sem dependências, com `async`/`ValueTask` completos, categorias de erro tipadas e composição monádica (`Then` / `Map` / `Zip`).
 

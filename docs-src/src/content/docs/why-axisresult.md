@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: WhyAxisResultcomparison
 ---
-# Why AxisResult? · comparison
 
 > There are other Result libraries for C#. This page tells you why AxisResult is different — a direct comparison, no hand-waving.
 

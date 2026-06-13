@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: ExitMatch
 ---
-# Exit · `Match`
 
 > The end of the rail. `Match` collapses an `AxisResult` into a **final value** — running exactly **one** of the two branches (success or failure).
 

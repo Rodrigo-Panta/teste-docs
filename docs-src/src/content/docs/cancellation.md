@@ -1,8 +1,6 @@
 ---
-title: Hello, World!
-description: This is a page in my Starlight-powered site
+title: CancellationCancellationToken
 ---
-# Cancellation · `CancellationToken`
 
 > Every async operator has a **`CancellationToken`-aware** overload: the delegate receives the token as its last parameter and the operator forwards it onward — the token flows through the pipeline without polluting *closures*.
 
