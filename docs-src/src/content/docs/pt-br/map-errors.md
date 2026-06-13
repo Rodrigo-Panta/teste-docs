@@ -1,4 +1,6 @@
-# Remapear erros · `MapError`
+---
+title: Remapear erros · `MapError`
+---
 
 > Reescreve os erros da trilha de falha — útil para **traduzir** códigos e tipos quando um resultado cruza uma fronteira de camada ou de contexto.
 
@@ -12,8 +14,8 @@ Um serviço interno falhou com códigos internos e você quer expô-los com os c
 
 | Você quer… | Use no lugar |
 |---|---|
-| **recuperar** da falha (voltar ao sucesso) | [`Recover`](recover.md) |
-| só **observar** o erro (log) | [`TapError`](tap.md) |
+| **recuperar** da falha (voltar ao sucesso) | [`Recover`](/teste-docs/pt-br/recover) |
+| só **observar** o erro (log) | [`TapError`](/teste-docs/pt-br/tap) |
 
 ---
 
@@ -41,6 +43,6 @@ var result = await internalService.ProcessAsync()
 
 ## Veja também
 
-- [Erros e tipos](errors-and-types.md) — o que um `AxisError` carrega
-- [Recuperar · `Recover`](recover.md) — tratar a falha em vez de só reescrevê-la
-- [Sair · `Match`](match.md) — onde os erros viram resposta final
+- [Erros e tipos](/teste-docs/pt-br/errors-and-types) — o que um `AxisError` carrega
+- [Recuperar · `Recover`](/teste-docs/pt-br/recover) — tratar a falha em vez de só reescrevê-la
+- [Sair · `Match`](/teste-docs/pt-br/match) — onde os erros viram resposta final

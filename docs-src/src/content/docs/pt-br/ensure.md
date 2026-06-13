@@ -1,4 +1,6 @@
-# Garantir · `Ensure`
+---
+title: Garantir · `Ensure`
+---
 
 > Valida um invariante **dentro** do pipeline. Se a guarda falhar, a trilha vira falha e o resto é pulado.
 
@@ -12,8 +14,8 @@ Garantir uma condição sobre o valor atual (estoque suficiente, status válido)
 
 | Você quer…                                 | Use no lugar            |
 |--------------------------------------------|-------------------------|
-| transformar o valor                        | [`Map`](map.md)         |
-| encadear um passo que produz um novo valor | [`Then`](then.md)       |
+| transformar o valor                        | [`Map`](/teste-docs/pt-br/map)         |
+| encadear um passo que produz um novo valor | [`Then`](/teste-docs/pt-br/then)       |
 | validação automática **antes** do handler  | (pipeline de validação) |
 
 ---
@@ -27,7 +29,7 @@ Garantir uma condição sobre o valor atual (estoque suficiente, status válido)
 | `RequireNotFound` | `(AxisError errorIfFound)` | achou → falha; `NotFound` → segue como sucesso |
 | `WithValue` | `(value)` | promove um `AxisResult` (sem valor) para `AxisResult<T>` |
 
-Todos têm variantes `Async` (`Task`/`ValueTask`) e [com `CancellationToken`](cancellation.md).
+Todos têm variantes `Async` (`Task`/`ValueTask`) e [com `CancellationToken`](/teste-docs/pt-br/cancellation).
 
 ---
 
@@ -59,6 +61,6 @@ public Task<AxisResult<IPersonAggregateApplication>> CreateAsync(NewArgs args)
 
 ## Veja também
 
-- [Encadear · `Then`](then.md) — o passo seguinte depois da guarda
-- [Erros e tipos](errors-and-types.md) — escolher o `AxisError` certo para a falha
-- [Recuperar · `Recover`](recover.md) — o oposto: tratar a falha e voltar ao sucesso
+- [Encadear · `Then`](/teste-docs/pt-br/then) — o passo seguinte depois da guarda
+- [Erros e tipos](/teste-docs/pt-br/errors-and-types) — escolher o `AxisError` certo para a falha
+- [Recuperar · `Recover`](/teste-docs/pt-br/recover) — o oposto: tratar a falha e voltar ao sucesso

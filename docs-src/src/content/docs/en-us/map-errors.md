@@ -1,4 +1,6 @@
-# Remap errors · `MapError`
+---
+title: Remap errors · `MapError`
+---
 
 > Rewrites the errors on the failure rail — useful for **translating** codes and types when a result crosses a layer or context boundary.
 

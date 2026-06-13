@@ -1,4 +1,6 @@
-# Referência da API
+---
+title: Referência da API
+---
 
 > O catálogo completo de operadores, agrupado por responsabilidade. Use como consulta — cada grupo tem uma página de detalhe com exemplos.
 
@@ -19,7 +21,7 @@
 | Implícito: `value` | atribui qualquer valor onde se espera `AxisResult<T>` |
 | Implícito: `AxisError` | atribui um erro onde se espera `AxisResult` |
 
-→ [Primeiros passos](getting-started.md) · [Exceções na borda · `Try`](boundary-and-try.md)
+→ [Primeiros passos](/teste-docs/pt-br/getting-started) · [Exceções na borda · `Try`](/teste-docs/pt-br/boundary-and-try)
 
 ---
 
@@ -35,7 +37,7 @@
 | `ToAxisResult` | `T -> AxisResult` | encadeia um efeito falível, retorna um `AxisResult` sem valor |
 | `ToAxisResultAsync` | versão async de `ToAxisResult` | |
 
-→ [Transformar · `Map`](map.md) · [Encadear · `Then`](then.md)
+→ [Transformar · `Map`](/teste-docs/pt-br/map) · [Encadear · `Then`](/teste-docs/pt-br/then)
 
 ---
 
@@ -48,7 +50,7 @@
 | `TapError(action)` | roda efeito na falha (logging, métricas) |
 | `TapErrorAsync(func)` | efeito async na falha |
 
-→ [Efeitos · `Tap`](tap.md)
+→ [Efeitos · `Tap`](/teste-docs/pt-br/tap)
 
 ---
 
@@ -60,7 +62,7 @@
 | `Ensure(func)` | validação delegada — `func` retorna `AxisResult` |
 | `EnsureAsync` | versões async |
 
-→ [Garantir · `Ensure`](ensure.md)
+→ [Garantir · `Ensure`](/teste-docs/pt-br/ensure)
 
 ---
 
@@ -70,7 +72,7 @@
 |--------|-------------|
 | `ActionAsync(func)` | roda uma operação falível (`T -> Task<AxisResult>`) e **preserva o valor original** no sucesso. Diferente de `ThenAsync`, que substitui o valor, `ActionAsync` o mantém — ideal para validação de domínio, persistência, ou qualquer passo em que você precise do valor adiante |
 
-→ [Encadear · `Then`](then.md)
+→ [Encadear · `Then`](/teste-docs/pt-br/then)
 
 ---
 
@@ -83,7 +85,7 @@
 | Encadeado: `.Zip().Zip()` | constrói tuplas até `(T1, T2, T3, T4)` |
 | `MapAsync((a, b) => ...)` | desestrutura tuplas no mapper |
 
-→ [Combinar · `Zip`](zip.md)
+→ [Combinar · `Zip`](/teste-docs/pt-br/zip)
 
 ---
 
@@ -98,7 +100,7 @@
 | `ZipParallelAsync(() => other)` | roda uma op independente em paralelo, junta na tupla, acumula erros se ambos falharem |
 | `ZipParallelAsync(ct => other, ct)` | variante ciente de CT |
 
-→ [Agregar · `Combine`/`All`](aggregate.md) · [Combinar · `Zip`](zip.md)
+→ [Agregar · `Combine`/`All`](/teste-docs/pt-br/aggregate) · [Combinar · `Zip`](/teste-docs/pt-br/zip)
 
 ---
 
@@ -115,7 +117,7 @@
 | `OrElse(fallback)` | tenta uma operação alternativa |
 | `OrElse(fallback, combineErrors: true)` | alternativa com acúmulo de erros |
 
-→ [Recuperar · `Recover`](recover.md)
+→ [Recuperar · `Recover`](/teste-docs/pt-br/recover)
 
 ---
 
@@ -127,7 +129,7 @@
 | `RequireNotFoundAsync(error)` | versão async |
 | `WithValueAsync(value)` | promove `AxisResult` para `AxisResult<T>` com um valor |
 
-→ [Garantir · `Ensure`](ensure.md)
+→ [Garantir · `Ensure`](/teste-docs/pt-br/ensure)
 
 ---
 
@@ -139,7 +141,7 @@
 | `MapError(func<list>)` | transforma/filtra a lista inteira de erros |
 | `MapErrorAsync` | versões async |
 
-→ [Remapear erros · `MapError`](map-errors.md)
+→ [Remapear erros · `MapError`](/teste-docs/pt-br/map-errors)
 
 ---
 
@@ -150,7 +152,7 @@
 | `Match(onSuccess, onFailure)` | converte para um tipo final — roda exatamente um ramo |
 | `MatchAsync` | versão async |
 
-→ [Sair · `Match`](match.md)
+→ [Sair · `Match`](/teste-docs/pt-br/match)
 
 ---
 
@@ -162,7 +164,7 @@
 | `from x in r1 from y in r2 select ...` | `r1.Then(x => r2).Map(...)` |
 | `SelectManyAsync` | encadeamento LINQ async |
 
-→ [Sintaxe de query LINQ](linq-query-syntax.md)
+→ [Sintaxe de query LINQ](/teste-docs/pt-br/linq-query-syntax)
 
 ---
 
@@ -173,7 +175,7 @@
 | `AsTaskAsync()` | embrulha um resultado síncrono em `Task` |
 | `AsValueTaskAsync()` | embrulha um resultado síncrono em `ValueTask` |
 
-→ [`Task` vs `ValueTask`](async-task-vs-valuetask.md)
+→ [`Task` vs `ValueTask`](/teste-docs/pt-br/async-task-vs-valuetask)
 
 ---
 
@@ -195,7 +197,7 @@ Todo operador async central tem uma sobrecarga ciente de CT cujo delegate recebe
 | `ActionAsync` | `(T, CancellationToken) => Task<AxisResult>` (preserva o valor) |
 | `ZipParallelAsync` | `(CancellationToken) => Task<AxisResult<TNew>>` |
 
-→ [Cancelamento](cancellation.md)
+→ [Cancelamento](/teste-docs/pt-br/cancellation)
 
 ---
 
@@ -206,16 +208,16 @@ Todo operador async central tem uma sobrecarga ciente de CT cujo delegate recebe
 | `var (isSuccess, errors) = result` | `AxisResult` |
 | `var (isSuccess, value, errors) = result` | `AxisResult<T>` (`value` é `default` na falha) |
 
-→ [Ergonomia](ergonomics.md)
+→ [Ergonomia](/teste-docs/pt-br/ergonomics)
 
 ---
 
 ## Veja também
 
-- [Primeiros passos](getting-started.md) — como criar e inspecionar resultados
-- [Encadear · `Then`](then.md) — o operador central do railway
-- [Documentação completa](README.md) — o mapa de toda a documentação
+- [Primeiros passos](/teste-docs/pt-br/getting-started) — como criar e inspecionar resultados
+- [Encadear · `Then`](/teste-docs/pt-br/then) — o operador central do railway
+- [Documentação completa](/teste-docs/pt-br/index.html) — o mapa de toda a documentação
 
 ---
 
-↩ [Voltar à documentação do AxisResult](README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/pt-br/index.html)

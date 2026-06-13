@@ -1,4 +1,6 @@
-# Efeitos · `Tap`
+---
+title: Efeitos · `Tap`
+---
 
 > Executa um efeito colateral (log, métrica, evento) e **devolve o resultado intacto**. `Tap` não muda a trilha nem o valor — ele só observa.
 
@@ -12,8 +14,8 @@ Registrar um log, emitir uma métrica, disparar um evento *fire-and-forget* — 
 
 | Você quer… | Use no lugar |
 |---|---|
-| um efeito que **pode falhar** e deve curto-circuitar | [`Then`](then.md) |
-| transformar o valor | [`Map`](map.md) |
+| um efeito que **pode falhar** e deve curto-circuitar | [`Then`](/teste-docs/pt-br/then) |
+| transformar o valor | [`Map`](/teste-docs/pt-br/map) |
 
 ---
 
@@ -24,7 +26,7 @@ Registrar um log, emitir uma métrica, disparar um evento *fire-and-forget* — 
 | `Tap` / `TapAsync` | **sucesso** | o valor |
 | `TapError` / `TapErrorAsync` | **falha** | a lista de `AxisError` |
 
-Todos retornam o resultado original e existem em `Task`/`ValueTask` e [com `CancellationToken`](cancellation.md).
+Todos retornam o resultado original e existem em `Task`/`ValueTask` e [com `CancellationToken`](/teste-docs/pt-br/cancellation).
 
 ---
 
@@ -52,6 +54,6 @@ return CreateOrderAsync(cmd)
 
 ## Veja também
 
-- [Encadear · `Then`](then.md) — quando o efeito precisa poder falhar
-- [Remapear erros · `MapError`](map-errors.md) — transformar os erros que o `TapError` observa
-- [Sair · `Match`](match.md) — o ramo de falha no fim da trilha
+- [Encadear · `Then`](/teste-docs/pt-br/then) — quando o efeito precisa poder falhar
+- [Remapear erros · `MapError`](/teste-docs/pt-br/map-errors) — transformar os erros que o `TapError` observa
+- [Sair · `Match`](/teste-docs/pt-br/match) — o ramo de falha no fim da trilha

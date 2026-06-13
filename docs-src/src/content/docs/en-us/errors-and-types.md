@@ -1,4 +1,6 @@
-# Errors and types · `AxisError`
+---
+title: Errors and types · `AxisError`
+---
 
 > An error in AxisResult is a **value**, not an exception. Each `AxisError` carries only two things: a stable **`Code`** and a **`Type`** (category).
 

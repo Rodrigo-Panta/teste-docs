@@ -1,4 +1,6 @@
-# Combine · `Zip`
+---
+title: Combine · `Zip`
+---
 
 > Joins **different values** into a tuple, to use them together later. Each `Zip` adds a value; if any of them fails, the whole tuple short-circuits.
 

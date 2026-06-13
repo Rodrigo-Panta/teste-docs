@@ -1,4 +1,6 @@
-# Encadear · `Then`
+---
+title: Encadear · `Then`
+---
 
 > **O coração do railway.** `Then` encadeia um passo que **pode falhar**. Se ele falhar, todos os passos seguintes são pulados — nunca mais um `if (result.IsFailure) return;`.
 
@@ -20,9 +22,9 @@ Use `Then` quando o próximo passo **retorna um `AxisResult`** (pode falhar) e v
 
 | Você quer… | Use no lugar |
 |---|---|
-| transformar o valor com algo que **não pode falhar** (montar um DTO) | [`Map`](map.md) |
-| **observar** o valor (log, métrica) sem mudar o trilho | [`Tap`](tap.md) |
-| manter **os dois** valores, o antigo e o novo | [`Zip`](zip.md) |
+| transformar o valor com algo que **não pode falhar** (montar um DTO) | [`Map`](/teste-docs/pt-br/map) |
+| **observar** o valor (log, métrica) sem mudar o trilho | [`Tap`](/teste-docs/pt-br/tap) |
+| manter **os dois** valores, o antigo e o novo | [`Zip`](/teste-docs/pt-br/zip) |
 
 ---
 
@@ -42,7 +44,7 @@ O comportamento depende **do que o delegate retorna**, não do nome do método:
 
 ## Sobrecargas disponíveis
 
-Toda forma existe para o `AxisResult<T>` síncrono, para pipelines `Task<AxisResult<T>>` e `ValueTask<AxisResult<T>>`. Cada uma também tem uma variante [ciente de `CancellationToken`](cancellation.md), em que o delegate recebe o token como último parâmetro.
+Toda forma existe para o `AxisResult<T>` síncrono, para pipelines `Task<AxisResult<T>>` e `ValueTask<AxisResult<T>>`. Cada uma também tem uma variante [ciente de `CancellationToken`](/teste-docs/pt-br/cancellation), em que o delegate recebe o token como último parâmetro.
 
 ```csharp
 // substitui o valor
@@ -112,8 +114,8 @@ public Task<AxisResult> HandleAsync(DeleteExternalApiCommand cmd)
 
 ## Veja também
 
-- [`Map`](map.md) — transformar um valor que não pode falhar
-- [`Ensure`](ensure.md) — garantir um invariante inline (`RequireNotFound`, `WithValue`)
-- [`Zip`](zip.md) — manter o valor antigo *e* um novo
-- [Erros e tipos](errors-and-types.md) — o que um `AxisError` carrega e as 12 categorias
-- [`Task` vs `ValueTask`](async-task-vs-valuetask.md) — qual forma async encadear
+- [`Map`](/teste-docs/pt-br/map) — transformar um valor que não pode falhar
+- [`Ensure`](/teste-docs/pt-br/ensure) — garantir um invariante inline (`RequireNotFound`, `WithValue`)
+- [`Zip`](/teste-docs/pt-br/zip) — manter o valor antigo *e* um novo
+- [Erros e tipos](/teste-docs/pt-br/errors-and-types) — o que um `AxisError` carrega e as 12 categorias
+- [`Task` vs `ValueTask`](/teste-docs/pt-br/async-task-vs-valuetask) — qual forma async encadear

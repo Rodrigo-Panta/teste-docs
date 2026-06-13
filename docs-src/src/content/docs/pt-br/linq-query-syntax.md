@@ -1,4 +1,6 @@
-# Sintaxe de query LINQ
+---
+title: Sintaxe de query LINQ
+---
 
 > Para quem prefere a sintaxe de *comprehension*, o AxisResult suporta `from … select …`. É equivalente ao encadeamento fluente — use a forma que ler melhor para o seu time.
 
@@ -13,7 +15,7 @@ Quando uma sequência de passos que dependem um do outro fica mais legível como
 | Você quer… | Use no lugar |
 |---|---|
 | pipelines **async** | a cadeia fluente `ThenAsync`/`MapAsync` |
-| um único passo de transformação | [`Map`](map.md) direto |
+| um único passo de transformação | [`Map`](/teste-docs/pt-br/map) direto |
 
 ---
 
@@ -50,10 +52,10 @@ var total = GetCustomer(customerId)
 
 ## Veja também
 
-- [Encadear · `Then`](then.md) — o `from … from …` por baixo
-- [Transformar · `Map`](map.md) — o `select` por baixo
-- [Referência da API](api-reference.md) — a tabela LINQ completa
+- [Encadear · `Then`](/teste-docs/pt-br/then) — o `from … from …` por baixo
+- [Transformar · `Map`](/teste-docs/pt-br/map) — o `select` por baixo
+- [Referência da API](/teste-docs/pt-br/api-reference) — a tabela LINQ completa
 
 ---
 
-↩ [Voltar à documentação do AxisResult](README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/pt-br/index.html)

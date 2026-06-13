@@ -1,4 +1,6 @@
-# Por que AxisResult? · comparação
+---
+title: Por que AxisResult? · comparação
+---
 
 > Existem outras libraries de Result para C#. Esta página diz por que o AxisResult é diferente — uma comparação direta, sem rodeios.
 
@@ -49,10 +51,10 @@ Desenhada para controllers ASP.NET, não para lógica de domínio. Suporte bási
 
 ## Veja também
 
-- [Railway-Oriented Programming](railway-oriented-programming.md) — o modelo que essas features implementam
-- [Primeiros passos](getting-started.md) — instalar e começar
-- [Referência da API](api-reference.md) — o catálogo completo de operadores
+- [Railway-Oriented Programming](/teste-docs/pt-br/railway-oriented-programming) — o modelo que essas features implementam
+- [Primeiros passos](/teste-docs/pt-br/getting-started) — instalar e começar
+- [Referência da API](/teste-docs/pt-br/api-reference) — o catálogo completo de operadores
 
 ---
 
-↩ [Voltar à documentação do AxisResult](README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/pt-br/index.html)

@@ -1,6 +1,8 @@
-# Recuperar · `Recover`
+---
+title: Recuperar · `Recover`
+---
 
-> O oposto do [`Then`](then.md): opera na **trilha de falha**. `Recover` e seus parentes trazem o pipeline de volta ao sucesso — sempre de forma **deliberada e explícita**.
+> O oposto do [`Then`](/teste-docs/pt-br/then): opera na **trilha de falha**. `Recover` e seus parentes trazem o pipeline de volta ao sucesso — sempre de forma **deliberada e explícita**.
 
 ---
 
@@ -12,8 +14,8 @@ Fornecer um padrão quando algo não foi encontrado, cair para uma fonte alterna
 
 | Você quer… | Use no lugar |
 |---|---|
-| só **observar** o erro (log) sem recuperar | [`TapError`](tap.md) |
-| **reescrever** o erro, não recuperar | [`MapError`](map-errors.md) |
+| só **observar** o erro (log) sem recuperar | [`TapError`](/teste-docs/pt-br/tap) |
+| **reescrever** o erro, não recuperar | [`MapError`](/teste-docs/pt-br/map-errors) |
 
 ---
 
@@ -63,6 +65,6 @@ var user = await FindByEmailAsync(email)
 
 ## Veja também
 
-- [Erros e tipos](errors-and-types.md) — `IsTransient`, tipos e códigos para condicionar a recuperação
-- [Remapear erros · `MapError`](map-errors.md) — transformar o erro em vez de recuperar
-- [Garantir · `Ensure`](ensure.md) — o oposto: levar do sucesso à falha
+- [Erros e tipos](/teste-docs/pt-br/errors-and-types) — `IsTransient`, tipos e códigos para condicionar a recuperação
+- [Remapear erros · `MapError`](/teste-docs/pt-br/map-errors) — transformar o erro em vez de recuperar
+- [Garantir · `Ensure`](/teste-docs/pt-br/ensure) — o oposto: levar do sucesso à falha

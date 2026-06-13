@@ -1,4 +1,6 @@
-# Railway-Oriented Programming · the why
+---
+title: Railway-Oriented Programming · the why
+---
 
 > Before learning the operators, understand the problem they solve. This page shows the typical "enterprise C#", why it hurts, and how the two-rail model dismantles it.
 

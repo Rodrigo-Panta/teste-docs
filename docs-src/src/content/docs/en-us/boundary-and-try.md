@@ -1,4 +1,6 @@
-# Exceptions at the boundary · `Try` and adapters
+---
+title: Exceptions at the boundary · `Try` and adapters
+---
 
 > "Exceptions at the boundary, results everywhere else." This page shows how to convert exception-throwing infrastructure surfaces (database, HTTP, brokers) into `AxisResult` at a single point — and what `Try` does **not** catch.
 

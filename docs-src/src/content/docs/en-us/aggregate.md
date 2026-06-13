@@ -1,5 +1,6 @@
-
-# Aggregate · `Combine` / `All`
+---
+title: Aggregate · `Combine` / `All`
+---
 
 > Reduces **many** results into **one**. Unlike [`Zip`](zip.md) (which combines different values into a tuple), here you fold a **collection** — and collect **all** the errors, not just the first.
 

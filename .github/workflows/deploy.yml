@@ -25,13 +25,13 @@ jobs:
 
 
       - run: npm ci
-        working-directory: starlight
+        working-directory: docs-src
 
       - run: npm run build
-        working-directory: starlight
+        working-directory: docs-src
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: starlight/dist
+          path: docs-src/dist
 
       - uses: actions/deploy-pages@v4

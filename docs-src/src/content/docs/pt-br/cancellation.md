@@ -1,4 +1,6 @@
-# Cancelamento · `CancellationToken`
+---
+title: Cancelamento · `CancellationToken`
+---
 
 > Todo operador async tem uma sobrecarga **ciente de `CancellationToken`**: o delegate recebe o token como último parâmetro e o operador o repassa adiante — o token flui pelo pipeline sem poluir *closures*.
 
@@ -41,5 +43,5 @@ Em apps com injeção de dependência, registre o `CancellationToken` do request
 
 ## Veja também
 
-- [`Task` vs `ValueTask`](async-task-vs-valuetask.md) — as duas famílias async que ganham variantes CT
-- [Encadear · `Then`](then.md) — o operador mais comum a receber o token
+- [`Task` vs `ValueTask`](/teste-docs/pt-br/async-task-vs-valuetask) — as duas famílias async que ganham variantes CT
+- [Encadear · `Then`](/teste-docs/pt-br/then) — o operador mais comum a receber o token

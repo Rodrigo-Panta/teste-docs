@@ -1,4 +1,6 @@
-# Recover · `Recover`
+---
+title: Recover · `Recover`
+---
 
 > The opposite of [`Then`](then.md): it operates on the **failure rail**. `Recover` and its relatives bring the pipeline back to success — always in a **deliberate and explicit** way.
 

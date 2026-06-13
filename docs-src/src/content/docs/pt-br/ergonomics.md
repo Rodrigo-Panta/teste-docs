@@ -1,4 +1,6 @@
-# Ergonomia · desestruturação e debugger
+---
+title: Ergonomia · desestruturação e debugger
+---
 
 > Pequenos detalhes de qualidade de vida: desestruturar resultados sem `try/catch` e enxergar o estado direto no debugger, sem expandir campos privados.
 
@@ -35,10 +37,10 @@ Num `AxisResult<T>` que falhou, `value` é `default(T)` (não uma exceção) —
 
 ## Veja também
 
-- [Sair · `Match`](match.md) — a outra forma de extrair o valor com segurança
-- [Erros e tipos](errors-and-types.md) — o que o `[DebuggerDisplay]` de um `AxisError` mostra
-- [Referência da API](api-reference.md) — a tabela de desestruturação
+- [Sair · `Match`](/teste-docs/pt-br/match) — a outra forma de extrair o valor com segurança
+- [Erros e tipos](/teste-docs/pt-br/errors-and-types) — o que o `[DebuggerDisplay]` de um `AxisError` mostra
+- [Referência da API](/teste-docs/pt-br/api-reference) — a tabela de desestruturação
 
 ---
 
-↩ [Voltar à documentação do AxisResult](README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/pt-br/index.html)

@@ -3,7 +3,7 @@
 import fs from "fs/promises";
 import path from "path";
 
-const DOCS_ROOT = path.resolve("./starlight/src/content/docs");
+const DOCS_ROOT = path.resolve("./docs-src/src/content/docs");
 const BASE_PATH = 'teste-docs';
 
 async function findMarkdownFiles(dir) {
@@ -83,26 +83,14 @@ async function processFile(file) {
 
   // Replace markdown links from [text](link) to [text](normalized-link)
   const updated = original.replace(
-    /\[([^\]]+)\]\(([^)]+)\)/g,
-    (match, text, link) => {
-      if (!shouldTransform(link)) {
-        return match;
-      }
+    /^# (.*)/g,
+    (match, text) => {
+      return `---\ntitle: ${text.replace(/[^a-zA-Z0-9]/g, "")}\n---`;
+    });
 
-      return `[${text}](${normalizeLink(link, file)})`;
-    }
-  );
 
-  // Replaces README for index in the link body 
-  const final = updated.replace(
-    /\[([^\]]+)\]\((.*README.*)\)/g,
-    (match, text, link) => {
-      return `[${text}](${link.replace("README", "index.html")})`;
-    }
-  );
-
-  if (final !== original) {
-    await fs.writeFile(file, final);
+  if (updated !== original) {
+    await fs.writeFile(file, updated);
     console.log("updated:", file);
   }
 }

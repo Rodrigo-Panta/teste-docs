@@ -1,6 +1,8 @@
-# AxisResult — Documentação
+---
+title: AxisResult — Documentação
+---
 
-> 🌐 [English (README principal)](../../README.md)
+> 🌐 [English (README principal)](/teste-docs/pt-br/index.html)
 
 **Railway-Oriented Programming para C#** — uma *Result monad* sem dependências, com `async`/`ValueTask` completos, categorias de erro tipadas e composição monádica (`Then` / `Map` / `Zip`).
 
@@ -22,13 +24,13 @@ Sucesso ━━━━━●━━━━━━━━━━●━━━━━━━
 Falha   ━━━━━╋━━━━━━━━━━╋━━━━━━━━━━╋━━━━▶  erros
 ```
 
-Cada operação **ou** tem sucesso e segue no trilho de cima, **ou** falha e cai no de baixo — pulando todo o resto. Sem `try/catch`, sem `if (x == null)`, sem `return` no meio do handler. → **[Railway-Oriented Programming](railway-oriented-programming.md)**
+Cada operação **ou** tem sucesso e segue no trilho de cima, **ou** falha e cai no de baixo — pulando todo o resto. Sem `try/catch`, sem `if (x == null)`, sem `return` no meio do handler. → **[Railway-Oriented Programming](/teste-docs/pt-br/railway-oriented-programming)**
 
 ### `AxisResult` vs `AxisResult<T>` — "sem dados" e "com dados"
 
 - **`AxisResult`** — o desfecho de uma operação que **não produz valor**: só importa se deu certo (salvar, deletar, validar, verificar senha).
-- **`AxisResult<T>`** — carrega um **valor** pela trilha de sucesso (buscar entidade, calcular total). `.Value` lança numa falha → prefira a [desestruturação segura ou `Match`](match.md).
-- Transitar entre os dois: [`ToAxisResult`](then.md) descarta o valor; [`WithValue`](ensure.md) promove um `AxisResult` para `AxisResult<T>`.
+- **`AxisResult<T>`** — carrega um **valor** pela trilha de sucesso (buscar entidade, calcular total). `.Value` lança numa falha → prefira a [desestruturação segura ou `Match`](/teste-docs/pt-br/match).
+- Transitar entre os dois: [`ToAxisResult`](/teste-docs/pt-br/then) descarta o valor; [`WithValue`](/teste-docs/pt-br/ensure) promove um `AxisResult` para `AxisResult<T>`.
 
 ### Criar resultados
 
@@ -42,11 +44,11 @@ AxisResult<int>    parse = AxisResult.Try(() => int.Parse(input));        // exc
 
 ### Tratamento de erros
 
-Um erro é um **valor** (`AxisError` = `Code` + `Type`), não uma exceção. As 12 categorias mapeiam para status HTTP, e `IsTransient` habilita retry. → **[Erros e tipos](errors-and-types.md)**
+Um erro é um **valor** (`AxisError` = `Code` + `Type`), não uma exceção. As 12 categorias mapeiam para status HTTP, e `IsTransient` habilita retry. → **[Erros e tipos](/teste-docs/pt-br/errors-and-types)**
 
 ### `Task` vs `ValueTask`
 
-Na dúvida, use `Task`. `ValueTask` só em *hot paths* que completam de forma síncrona. → **[Task vs ValueTask](async-task-vs-valuetask.md)**
+Na dúvida, use `Task`. `ValueTask` só em *hot paths* que completam de forma síncrona. → **[Task vs ValueTask](/teste-docs/pt-br/async-task-vs-valuetask)**
 
 ### Instalação
 
@@ -54,7 +56,7 @@ Na dúvida, use `Task`. `ValueTask` só em *hot paths* que completam de forma s�
 dotnet add package AxisResult
 ```
 
-→ Guia completo: **[Primeiros passos](getting-started.md)**
+→ Guia completo: **[Primeiros passos](/teste-docs/pt-br/getting-started)**
 
 ---
 
@@ -62,22 +64,22 @@ dotnet add package AxisResult
 
 | Grupo                           | Você quer…                                        | Detalhe                            |
 |---------------------------------|---------------------------------------------------|------------------------------------|
-| **Transformar · `Map`**         | mudar o valor (não pode falhar)                   | [map.md](map.md)                   |
-| **Encadear · `Then`** ⭐         | um passo que **pode falhar** (coração da library) | [then.md](then.md)                 |
-| **Garantir · `Ensure`**         | validar um invariante inline                      | [ensure.md](ensure.md)             |
-| **Sair · `Match`**              | colapsar o pipeline num valor final               | [match.md](match.md)               |
-| **Efeitos · `Tap`**             | observar (log/métrica) sem mudar a trilha         | [tap.md](tap.md)                   |
-| **Recuperar · `Recover`**       | tratar a falha e voltar ao sucesso                | [recover.md](recover.md)           |
-| **Combinar · `Zip`**            | juntar valores **diferentes** numa tupla          | [zip.md](zip.md)                   |
-| **Agregar · `Combine`/`All`**   | reduzir **N** resultados a um                     | [aggregate.md](aggregate.md)       |
-| **Remapear erros · `MapError`** | reescrever erros entre camadas                    | [map-errors.md](map-errors.md)     |
-| **Cancelamento**                | passar `CancellationToken` pela cadeia            | [cancellation.md](cancellation.md) |
+| **Transformar · `Map`**         | mudar o valor (não pode falhar)                   | [map.md](/teste-docs/pt-br/map)                   |
+| **Encadear · `Then`** ⭐         | um passo que **pode falhar** (coração da library) | [then.md](/teste-docs/pt-br/then)                 |
+| **Garantir · `Ensure`**         | validar um invariante inline                      | [ensure.md](/teste-docs/pt-br/ensure)             |
+| **Sair · `Match`**              | colapsar o pipeline num valor final               | [match.md](/teste-docs/pt-br/match)               |
+| **Efeitos · `Tap`**             | observar (log/métrica) sem mudar a trilha         | [tap.md](/teste-docs/pt-br/tap)                   |
+| **Recuperar · `Recover`**       | tratar a falha e voltar ao sucesso                | [recover.md](/teste-docs/pt-br/recover)           |
+| **Combinar · `Zip`**            | juntar valores **diferentes** numa tupla          | [zip.md](/teste-docs/pt-br/zip)                   |
+| **Agregar · `Combine`/`All`**   | reduzir **N** resultados a um                     | [aggregate.md](/teste-docs/pt-br/aggregate)       |
+| **Remapear erros · `MapError`** | reescrever erros entre camadas                    | [map-errors.md](/teste-docs/pt-br/map-errors)     |
+| **Cancelamento**                | passar `CancellationToken` pela cadeia            | [cancellation.md](/teste-docs/pt-br/cancellation) |
 
-**Comece aqui:** [Primeiros passos](getting-started.md) · [Railway-Oriented Programming](railway-oriented-programming.md) · [Por que AxisResult?](why-axisresult.md)
+**Comece aqui:** [Primeiros passos](/teste-docs/pt-br/getting-started) · [Railway-Oriented Programming](/teste-docs/pt-br/railway-oriented-programming) · [Por que AxisResult?](/teste-docs/pt-br/why-axisresult)
 
-**Fundamentos:** [Erros e tipos](errors-and-types.md) · [`Task` vs `ValueTask`](async-task-vs-valuetask.md) · [Exceções na borda](boundary-and-try.md)
+**Fundamentos:** [Erros e tipos](/teste-docs/pt-br/errors-and-types) · [`Task` vs `ValueTask`](/teste-docs/pt-br/async-task-vs-valuetask) · [Exceções na borda](/teste-docs/pt-br/boundary-and-try)
 
-**Referência e extras:** [Referência da API](api-reference.md) · [Sintaxe de query LINQ](linq-query-syntax.md) · [Ergonomia](ergonomics.md)
+**Referência e extras:** [Referência da API](/teste-docs/pt-br/api-reference) · [Sintaxe de query LINQ](/teste-docs/pt-br/linq-query-syntax) · [Ergonomia](/teste-docs/pt-br/ergonomics)
 
 ---
 

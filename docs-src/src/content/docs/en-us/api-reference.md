@@ -1,4 +1,6 @@
-# API reference
+---
+title: API reference
+---
 
 > The complete operator catalog, grouped by responsibility. Use it for lookup — each group has a detail page with examples.
 

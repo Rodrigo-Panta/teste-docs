@@ -1,4 +1,6 @@
-# Sair · `Match`
+---
+title: Sair · `Match`
+---
 
 > O fim da trilha. `Match` colapsa um `AxisResult` em um **valor final** — rodando exatamente **um** dos dois ramos (sucesso ou falha).
 
@@ -56,6 +58,6 @@ Diferente de `.Value` (que lança numa falha), a desestruturação é segura sem
 
 ## Veja também
 
-- [Erros e tipos](errors-and-types.md) — o `Type` que vira status HTTP
-- [Encadear · `Then`](then.md) — o que vem antes do `Match`
-- [Recuperar · `Recover`](recover.md) — tratar a falha **sem** sair do pipeline
+- [Erros e tipos](/teste-docs/pt-br/errors-and-types) — o `Type` que vira status HTTP
+- [Encadear · `Then`](/teste-docs/pt-br/then) — o que vem antes do `Match`
+- [Recuperar · `Recover`](/teste-docs/pt-br/recover) — tratar a falha **sem** sair do pipeline

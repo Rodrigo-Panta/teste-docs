@@ -1,4 +1,6 @@
-# `Task` vs `ValueTask` · qual async usar
+---
+title: `Task` vs `ValueTask` · qual async usar
+---
 
 > Todo método async do AxisResult tem duas variantes: `Task` e `ValueTask`. **Na dúvida, use `Task`.** Esta página diz exatamente quando o `ValueTask` compensa — porque nem todo dev tem isso na ponta da língua.
 
@@ -44,5 +46,5 @@ Toda composição (`ThenAsync`, `MapAsync`, `TapAsync`…) funciona igual nos do
 
 ## Veja também
 
-- [Encadear · `Then`](then.md) — o pipeline que ganha as variantes async
-- [Cancelamento](cancellation.md) — as variantes com `CancellationToken`
+- [Encadear · `Then`](/teste-docs/pt-br/then) — o pipeline que ganha as variantes async
+- [Cancelamento](/teste-docs/pt-br/cancellation) — as variantes com `CancellationToken`

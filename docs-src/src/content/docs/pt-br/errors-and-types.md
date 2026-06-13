@@ -1,4 +1,6 @@
-# Erros e tipos · `AxisError`
+---
+title: Erros e tipos · `AxisError`
+---
 
 > Um erro no AxisResult é um **valor**, não uma exceção. Cada `AxisError` carrega só duas coisas: um **`Code`** estável e um **`Type`** (categoria).
 
@@ -50,7 +52,7 @@ return result.Match(
 
 Assim: códigos pequenos e canônicos (`USER_NOT_FOUND`); várias UIs (REST, gRPC, CLI) renderizam o mesmo código de formas diferentes; testes verificam **códigos**, não prosa em inglês; nenhum dado pessoal vaza no payload de erro.
 
-> Precisa passar **detalhes** (id, quantidade tentada)? Emita **vários `AxisError`** — a lista de erros já é a coleção natural para isso. Veja [Agregar · `Combine`/`All`](aggregate.md).
+> Precisa passar **detalhes** (id, quantidade tentada)? Emita **vários `AxisError`** — a lista de erros já é a coleção natural para isso. Veja [Agregar · `Combine`/`All`](/teste-docs/pt-br/aggregate).
 
 ---
 
@@ -69,6 +71,6 @@ if (error.IsTransient)   // true p/ ServiceUnavailable, Timeout, TooManyRequests
 
 ## Veja também
 
-- [Remapear erros · `MapError`](map-errors.md) — reescrever códigos/tipos ao cruzar camadas
-- [Recuperar · `Recover`](recover.md) — voltar da trilha de falha para a de sucesso
-- [Sair · `Match`](match.md) — converter o resultado final em resposta HTTP
+- [Remapear erros · `MapError`](/teste-docs/pt-br/map-errors) — reescrever códigos/tipos ao cruzar camadas
+- [Recuperar · `Recover`](/teste-docs/pt-br/recover) — voltar da trilha de falha para a de sucesso
+- [Sair · `Match`](/teste-docs/pt-br/match) — converter o resultado final em resposta HTTP

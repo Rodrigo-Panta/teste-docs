@@ -1,4 +1,6 @@
-# Railway-Oriented Programming · o porquê
+---
+title: Railway-Oriented Programming · o porquê
+---
 
 > Antes de aprender os operadores, entenda o problema que eles resolvem. Esta página mostra o "C# corporativo" típico, por que ele dói, e como o modelo de dois trilhos o desmonta.
 
@@ -115,10 +117,10 @@ Não é uma ideia nova — vem da programação funcional (o `Either` de Haskell
 
 ## Veja também
 
-- [Primeiros passos](getting-started.md) — instalar e escrever o primeiro pipeline
-- [Encadear · `Then`](then.md) — a chave de desvio mais importante
-- [Por que AxisResult?](why-axisresult.md) — comparação com outras libraries de Result
+- [Primeiros passos](/teste-docs/pt-br/getting-started) — instalar e escrever o primeiro pipeline
+- [Encadear · `Then`](/teste-docs/pt-br/then) — a chave de desvio mais importante
+- [Por que AxisResult?](/teste-docs/pt-br/why-axisresult) — comparação com outras libraries de Result
 
 ---
 
-↩ [Voltar à documentação do AxisResult](README.md)
+↩ [Voltar à documentação do AxisResult](/teste-docs/pt-br/index.html)
