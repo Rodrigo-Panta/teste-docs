@@ -4,6 +4,7 @@ import fs from "fs/promises";
 import path from "path";
 
 const DOCS_ROOT = path.resolve("./starlight/src/content/docs");
+const BASE_PATH = 'teste-docs';
 
 async function findMarkdownFiles(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -58,6 +59,9 @@ function normalizeLink(link, markdownFile) {
       pathname
     );
   }
+  if (absolute.includes("README")) {
+    console.log("absolute:", absolute);
+  }
 
   const relativeToDocs = path.relative(
     DOCS_ROOT,
@@ -67,7 +71,7 @@ function normalizeLink(link, markdownFile) {
   const slug =
     "/" +
     path.posix
-      .join("docs", relativeToDocs)
+      .join(BASE_PATH, relativeToDocs)
       .replace(/\.md$/, "")
       .replace(/\\/g, "/");
 
@@ -77,6 +81,7 @@ function normalizeLink(link, markdownFile) {
 async function processFile(file) {
   const original = await fs.readFile(file, "utf8");
 
+  // Replace markdown links from [text](link) to [text](normalized-link)
   const updated = original.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
     (match, text, link) => {
@@ -88,8 +93,16 @@ async function processFile(file) {
     }
   );
 
-  if (updated !== original) {
-    await fs.writeFile(file, updated);
+  // Replaces README for index in the link body 
+  const final = updated.replace(
+    /\[([^\]]+)\]\((.*README.*)\)/g,
+    (match, text, link) => {
+      return `[${text}](${link.replace("README", "index.html")})`;
+    }
+  );
+
+  if (final !== original) {
+    await fs.writeFile(file, final);
     console.log("updated:", file);
   }
 }
