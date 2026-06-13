@@ -1,5 +1,5 @@
 ---
-title: Primeirospassosinstalaoeuso
+title: "Primeiros passos · instalação e uso"
 ---
 
 > Instale o pacote, crie resultados, inspecione-os e encadeie a primeira operação — o mínimo para sair do zero em poucos minutos.

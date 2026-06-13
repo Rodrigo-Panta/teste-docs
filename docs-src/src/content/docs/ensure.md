@@ -1,5 +1,5 @@
 ---
-title: EnsureEnsure
+title: "Ensure · `Ensure`"
 ---
 
 > Validates an invariant **inside** the pipeline. If the guard fails, the rail switches to failure and the rest is skipped.

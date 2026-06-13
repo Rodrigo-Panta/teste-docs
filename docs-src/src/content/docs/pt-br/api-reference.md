@@ -1,5 +1,5 @@
 ---
-title: RefernciadaAPI
+title: "Referência da API"
 ---
 
 > O catálogo completo de operadores, agrupado por responsabilidade. Use como consulta — cada grupo tem uma página de detalhe com exemplos.

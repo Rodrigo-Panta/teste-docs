@@ -1,5 +1,5 @@
 ---
-title: WhyAxisResultcomparison
+title: "Why AxisResult? · comparison"
 ---
 
 > There are other Result libraries for C#. This page tells you why AxisResult is different — a direct comparison, no hand-waving.

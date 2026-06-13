@@ -1,5 +1,5 @@
 ---
-title: SintaxedequeryLINQ
+title: "Sintaxe de query LINQ"
 ---
 
 > Para quem prefere a sintaxe de *comprehension*, o AxisResult suporta `from … select …`. É equivalente ao encadeamento fluente — use a forma que ler melhor para o seu time.

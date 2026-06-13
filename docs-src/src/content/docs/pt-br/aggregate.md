@@ -1,5 +1,5 @@
 ---
-title: AgregarCombineAll
+title: "Agregar · `Combine` / `All`"
 ---
 
 > Reduz **muitos** resultados a **um**. Diferente do [`Zip`](/teste-docs/pt-br/zip) (que combina valores diferentes numa tupla), aqui você dobra uma **coleção** — e coleta **todos** os erros, não só o primeiro.

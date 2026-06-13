@@ -1,5 +1,5 @@
 ---
-title: GarantirEnsure
+title: "Garantir · `Ensure`"
 ---
 
 > Valida um invariante **dentro** do pipeline. Se a guarda falhar, a trilha vira falha e o resto é pulado.

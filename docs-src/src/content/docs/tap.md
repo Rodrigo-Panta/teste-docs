@@ -1,5 +1,5 @@
 ---
-title: SideeffectsTap
+title: "Side effects · `Tap`"
 ---
 
 > Runs a side effect (log, metric, event) and **returns the result untouched**. `Tap` changes neither the rail nor the value — it only observes.

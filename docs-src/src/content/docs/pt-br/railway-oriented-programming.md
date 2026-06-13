@@ -1,5 +1,5 @@
 ---
-title: RailwayOrientedProgrammingoporqu
+title: "Railway-Oriented Programming · o porquê"
 ---
 
 > Antes de aprender os operadores, entenda o problema que eles resolvem. Esta página mostra o "C# corporativo" típico, por que ele dói, e como o modelo de dois trilhos o desmonta.

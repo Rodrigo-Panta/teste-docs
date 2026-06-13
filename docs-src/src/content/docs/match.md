@@ -1,5 +1,5 @@
 ---
-title: ExitMatch
+title: "Exit · `Match`"
 ---
 
 > The end of the rail. `Match` collapses an `AxisResult` into a **final value** — running exactly **one** of the two branches (success or failure).

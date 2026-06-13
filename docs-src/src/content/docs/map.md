@@ -1,5 +1,5 @@
 ---
-title: TransformMap
+title: "Transform · `Map`"
 ---
 
 > Transforms the value on the success rail with a function that **cannot fail**. On the failure rail, `Map` does nothing — the error flows straight through.

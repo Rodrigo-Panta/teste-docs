@@ -1,5 +1,5 @@
 ---
-title: ErrosetiposAxisError
+title: "Erros e tipos · `AxisError`"
 ---
 
 > Um erro no AxisResult é um **valor**, não uma exceção. Cada `AxisError` carrega só duas coisas: um **`Code`** estável e um **`Type`** (categoria).

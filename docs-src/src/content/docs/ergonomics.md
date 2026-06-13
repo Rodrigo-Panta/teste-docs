@@ -1,5 +1,5 @@
 ---
-title: Ergonomicsdeconstructionanddebugger
+title: "Ergonomics · deconstruction and debugger"
 ---
 
 > Small quality-of-life details: deconstruct results with no `try/catch` and see the state directly in the debugger, without expanding private fields.

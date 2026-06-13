@@ -1,5 +1,5 @@
 ---
-title: EfeitosTap
+title: "Efeitos · `Tap`"
 ---
 
 > Executa um efeito colateral (log, métrica, evento) e **devolve o resultado intacto**. `Tap` não muda a trilha nem o valor — ele só observa.

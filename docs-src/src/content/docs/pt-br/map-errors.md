@@ -1,5 +1,5 @@
 ---
-title: RemapearerrosMapError
+title: "Remapear erros · `MapError`"
 ---
 
 > Reescreve os erros da trilha de falha — útil para **traduzir** códigos e tipos quando um resultado cruza uma fronteira de camada ou de contexto.

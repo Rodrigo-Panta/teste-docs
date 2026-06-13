@@ -1,5 +1,5 @@
 ---
-title: Ergonomiadesestruturaoedebugger
+title: "Ergonomia · desestruturação e debugger"
 ---
 
 > Pequenos detalhes de qualidade de vida: desestruturar resultados sem `try/catch` e enxergar o estado direto no debugger, sem expandir campos privados.

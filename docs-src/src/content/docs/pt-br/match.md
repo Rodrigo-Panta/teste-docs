@@ -1,5 +1,5 @@
 ---
-title: SairMatch
+title: "Sair · `Match`"
 ---
 
 > O fim da trilha. `Match` colapsa um `AxisResult` em um **valor final** — rodando exatamente **um** dos dois ramos (sucesso ou falha).

@@ -1,5 +1,5 @@
 ---
-title: PorqueAxisResultcomparao
+title: "Por que AxisResult? · comparação"
 ---
 
 > Existem outras libraries de Result para C#. Esta página diz por que o AxisResult é diferente — uma comparação direta, sem rodeios.

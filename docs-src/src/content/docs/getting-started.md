@@ -1,5 +1,5 @@
 ---
-title: Gettingstartedinstallationandusage
+title: "Getting started · installation and usage"
 ---
 
 > Install the package, create results, inspect them and chain the first operation — the minimum to get off the ground in a few minutes.

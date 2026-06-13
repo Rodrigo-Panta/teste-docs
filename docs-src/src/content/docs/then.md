@@ -1,5 +1,5 @@
 ---
-title: ChainThen
+title: "Chain · `Then`"
 ---
 
 > **The heart of the railway.** `Then` chains a step that **can fail**. If it fails, every following step is skipped — never again an `if (result.IsFailure) return;`.
